@@ -41,6 +41,4 @@ Buka browser di `http://localhost:3000`.
 
 ## 📬 Kontak
 - **Email**: [revanarnanta@gmail.com](mailto:revanarnanta@gmail.com)
-- **WhatsApp**: [+62 822-9707-8296](https://wa.me/6282297078296)
 - **GitHub**: [github.com/alifianrevan](https://github.com/alifianrevan)
-- **Domisili**: Sawangan, Kota Depok, Jawa Barat
