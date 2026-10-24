@@ -25,20 +25,6 @@ Website portofolio profesional dan interaktif milik **Alifian Revan Arnanta**, M
 
 ---
 
-## 🚀 Cara Menjalankan Secara Lokal
-Anda dapat membuka file `index.html` langsung di browser, atau menggunakan server lokal sederhana:
-
-```bash
-# Menggunakan npx serve
-npx serve .
-
-# Atau menggunakan Python
-python -m http.server 3000
-```
-Buka browser di `http://localhost:5500`.
-
----
-
 ## 📬 Kontak
 - **Email**: [revanarnanta@gmail.com](mailto:revanarnanta@gmail.com)
 - **GitHub**: [github.com/alifianrevan](https://github.com/alifianrevan)
