@@ -3,64 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alifian Revan Arnanta | Portofolio Software Engineer & Asisten Lab</title>
+  <title>Alifian Revan Arnanta — Rekayasa Perangkat Lunak & Portofolio</title>
   
   <!-- SEO & Meta Tags -->
-  <meta name="description" content="Portofolio resmi Alifian Revan Arnanta - Mahasiswa Teknik Informatika Universitas Pancasila, Asisten Laboratorium Komputer, Full-Stack Developer, dan praktisi Data Science & IoT.">
+  <meta name="description" content="Portofolio resmi Alifian Revan Arnanta — Mahasiswa Teknik Informatika Universitas Pancasila, Asisten Laboratorium Praktikum, Full-Stack Developer, dan praktisi Data Science & IoT.">
   <meta name="keywords" content="Alifian Revan Arnanta, Portofolio, Teknik Informatika, Universitas Pancasila, Software Engineer, Java, JavaFX, Python, JavaScript, SQL, 3NF, IoT, GIS">
   <meta name="author" content="Alifian Revan Arnanta">
   
-  <!-- Open Graph / Social Sharing -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Alifian Revan Arnanta | Portofolio Web & CV">
-  <meta property="og:description" content="Portofolio profesional dan riwayat pengalaman Alifian Revan Arnanta di bidang Rekayasa Perangkat Lunak, Asistensi Laboratorium, Basis Data, dan IoT.">
+  <meta property="og:title" content="Alifian Revan Arnanta — Portofolio Web">
+  <meta property="og:description" content="Eksplorasi rekayasa perangkat lunak, asistensi laboratorium, basis data relasional, dan IoT oleh Alifian Revan Arnanta.">
   <meta property="og:image" content="assets/img/avatar.jpg">
   
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><text x='50%' y='63%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='50' fill='%23ffffff'>AR</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230a0d14' stroke='%23e2e8f0' stroke-width='3'/><path d='M30 65 L50 25 L70 65' fill='none' stroke='%23e2e8f0' stroke-width='4' stroke-linecap='round'/><circle cx='50' cy='25' r='5' fill='%23cbd5e1'/></svg>">
 </head>
-<body class="dark-theme">
-  <!-- Ambient background glow elements -->
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
-  <div class="ambient-glow glow-3"></div>
+<body class="celestial-theme">
 
-  <!-- Header / Navigation Bar -->
-  <header class="navbar-wrapper">
-    <div class="navbar container">
-      <a href="#beranda" class="nav-brand" id="brand-logo">
-        <span class="brand-badge">AR</span>
-        <span class="brand-name">Alifian Revan<span>.</span></span>
+  <!-- Interactive Starfield Canvas -->
+  <canvas id="celestial-canvas"></canvas>
+
+  <!-- Ambient celestial mist -->
+  <div class="celestial-vignette"></div>
+
+  <!-- Minimalist Fixed Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-link" aria-label="Beranda">
+        <svg class="brand-crest" width="30" height="30" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+          <circle cx="50" cy="50" r="44" stroke-width="2.5" stroke-dasharray="4 3"/>
+          <path d="M50 18 C32 18 18 32 18 50 C18 68 32 82 50 82 C42 74 38 63 38 50 C38 37 42 26 50 18 Z" fill="currentColor" fill-opacity="0.15" stroke-width="2.5"/>
+          <circle cx="68" cy="36" r="3.5" fill="currentColor"/>
+          <circle cx="75" cy="56" r="2" fill="currentColor"/>
+        </svg>
+        <span class="brand-initials">AR</span>
       </a>
 
-      <nav class="nav-menu" id="nav-menu">
-        <ul class="nav-list">
-          <li><a href="#beranda" class="nav-link active">Beranda</a></li>
-          <li><a href="#tentang" class="nav-link">Tentang</a></li>
-          <li><a href="#pengalaman" class="nav-link">Pengalaman</a></li>
-          <li><a href="#pendidikan" class="nav-link">Pendidikan</a></li>
-          <li><a href="#keahlian" class="nav-link">Keahlian</a></li>
-          <li><a href="#proyek" class="nav-link">Proyek</a></li>
-          <li><a href="#kontak" class="nav-link">Kontak</a></li>
+      <nav class="desktop-nav" id="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="#prolog" class="nav-item"><span>01</span> Prolog</a></li>
+          <li><a href="#pengalaman" class="nav-item"><span>02</span> Jejak Langkah</a></li>
+          <li><a href="#pendidikan" class="nav-item"><span>03</span> Pendidikan</a></li>
+          <li><a href="#keahlian" class="nav-item"><span>04</span> Keahlian</a></li>
+          <li><a href="#karya" class="nav-item"><span>05</span> Karya</a></li>
+          <li><a href="#kontak" class="nav-item"><span>06</span> Kontak</a></li>
         </ul>
       </nav>
 
-      <div class="nav-actions">
-        <button class="btn btn-outline btn-sm" id="btn-view-cv" title="Buka Pratinjau CV Resmi">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      <div class="header-actions">
+        <button class="btn-cv-pill" id="btn-open-cv" title="Buka Dokumen CV Standar ATS">
+          <span class="pill-dot"></span>
           <span>CV ATS</span>
         </button>
-        <a href="https://github.com/alifianrevan" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="btn-nav-github">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          <span>GitHub</span>
+        <a href="https://github.com/alifianrevan" target="_blank" rel="noopener noreferrer" class="btn-git-icon" aria-label="GitHub Alifian">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
         </a>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Buka navigasi mobile">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Buka Menu">
           <span></span>
           <span></span>
           <span></span>
@@ -69,189 +74,207 @@
     </div>
   </header>
 
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <span class="drawer-title">NAVIGASI</span>
+      <button class="drawer-close" id="drawer-close">✕</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#hero" class="drawer-item">Beranda</a></li>
+      <li><a href="#prolog" class="drawer-item"><span>01</span> Prolog</a></li>
+      <li><a href="#pengalaman" class="drawer-item"><span>02</span> Jejak Langkah</a></li>
+      <li><a href="#pendidikan" class="drawer-item"><span>03</span> Pendidikan</a></li>
+      <li><a href="#keahlian" class="drawer-item"><span>04</span> Keahlian</a></li>
+      <li><a href="#karya" class="drawer-item"><span>05</span> Karya Pilihan</a></li>
+      <li><a href="#kontak" class="drawer-item"><span>06</span> Kontak & Transmisi</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="https://github.com/alifianrevan" target="_blank" rel="noopener" class="drawer-github-link">
+        github.com/alifianrevan
+      </a>
+    </div>
+  </aside>
+
   <main>
-    <!-- HERO SECTION -->
-    <section id="beranda" class="hero-section section-padding">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="status-dot"></span>
-            <span>Terbuka untuk Magang & Peluang Software Engineering</span>
-          </div>
-          
-          <h1 class="hero-title">
-            Halo, Saya <span class="gradient-text">Alifian Revan Arnanta</span>
-          </h1>
+    <!-- HERO SECTION: Atmospheric Moonfarmer Style -->
+    <section class="celestial-hero" id="hero">
+      <div class="hero-inner">
+        <!-- Celestial Moon Crest Emblem -->
+        <div class="celestial-emblem-wrap">
+          <svg class="celestial-emblem" viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Crescent and Orbit -->
+            <path d="M120 18 C65 18 20 63 20 118 C20 156 42 189 74 205 C58 186 48 160 48 132 C48 83 88 44 136 44 C158 44 179 52 195 66 C176 37 150 18 120 18 Z" fill="rgba(226, 232, 240, 0.9)" />
+            
+            <!-- Observatory Dome on Crest -->
+            <path d="M110 50 A16 16 0 0 1 142 50 Z" fill="#0b0e17" stroke="rgba(226, 232, 240, 0.9)" stroke-width="2"/>
+            <rect x="123" y="40" width="6" height="10" fill="rgba(226, 232, 240, 0.9)"/>
+            
+            <!-- Satellite Antenna / IoT Mast -->
+            <line x1="84" y1="88" x2="70" y2="72" stroke="rgba(226, 232, 240, 0.9)" stroke-width="2"/>
+            <path d="M64 66 C68 70 72 74 76 78" stroke="rgba(226, 232, 240, 0.9)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M60 62 C66 68 72 74 78 80" stroke="rgba(226, 232, 240, 0.5)" stroke-width="1.5" stroke-linecap="round"/>
+            
+            <!-- Rocket ascending into night sky -->
+            <path d="M162 76 C162 76 168 62 176 56 C184 64 170 70 170 70 L174 80 L166 84 L162 76 Z" fill="rgba(226, 232, 240, 0.9)"/>
+            <circle cx="170" cy="67" r="1.5" fill="#0b0e17"/>
 
-          <div class="hero-role-wrapper">
-            <span class="role-prefix">&gt; </span>
-            <span class="role-text" id="typewriter-text">Asisten Laboratorium Komputer</span>
-            <span class="cursor-blink">_</span>
-          </div>
-
-          <p class="hero-description">
-            Mahasiswa Teknik Informatika di <strong>Universitas Pancasila</strong> dengan pengalaman 1,5 tahun sebagai Asisten Laboratorium Praktikum. Berfokus pada <em>Software Engineering</em>, <em>Full-Stack Web Development</em>, serta implementasi analitis pada <em>Basis Data Relasional</em>, <em>Machine Learning</em>, <em>IoT</em>, dan <em>GIS</em>.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#proyek" class="btn btn-primary btn-lg">
-              <span>Lihat Proyek & Portofolio</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-            <a href="#kontak" class="btn btn-outline btn-lg">
-              <span>Hubungi Saya</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            </a>
-          </div>
-
-          <!-- Quick Metrics Bar -->
-          <div class="hero-stats">
-            <div class="stat-card">
-              <span class="stat-number" data-target="1.5">1.5</span><span class="stat-unit">Tahun</span>
-              <span class="stat-label">Asisten Lab Komputer</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-card">
-              <span class="stat-number" data-target="3.60">3.60</span>
-              <span class="stat-label">IPK Akademik (S1)</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-card">
-              <span class="stat-number" data-target="3">3</span><span class="stat-unit">+</span>
-              <span class="stat-label">Mata Kuliah Praktikum</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-card">
-              <span class="stat-number" data-target="10">10</span><span class="stat-unit">+</span>
-              <span class="stat-label">Keahlian & Teknologi</span>
-            </div>
-          </div>
+            <!-- Delicate sprouting flora leaves (Moonfarmer concept) -->
+            <path d="M64 120 C54 116 52 106 52 106 C52 106 62 106 66 116 Z" fill="rgba(226, 232, 240, 0.8)"/>
+            <path d="M72 110 C66 102 68 92 68 92 C68 92 76 96 76 106 Z" fill="rgba(226, 232, 240, 0.8)"/>
+            <path d="M174 102 C184 98 186 88 186 88 C186 88 176 88 172 98 Z" fill="rgba(226, 232, 240, 0.8)"/>
+            <path d="M166 114 C174 106 172 96 172 96 C172 96 164 100 164 110 Z" fill="rgba(226, 232, 240, 0.8)"/>
+          </svg>
         </div>
 
-        <!-- Hero Visual / Avatar Card -->
-        <div class="hero-visual">
-          <div class="avatar-card-container">
-            <div class="avatar-card glass-panel" id="hero-tilt-card">
-              <div class="avatar-image-wrapper">
-                <img src="assets/img/avatar.jpg" alt="Alifian Revan Arnanta - Software Engineer & Lab Teaching Assistant" class="avatar-img" width="460" height="460" loading="eager">
-                <div class="avatar-overlay"></div>
-              </div>
+        <!-- Wide Spaced Title -->
+        <h1 class="hero-name">A L I F I A N &nbsp; R E V A N</h1>
+        <div class="hero-title-separator"></div>
 
-              <!-- Floating Tech Badges -->
-              <div class="floating-badge badge-1 glass-pill">
-                <span class="badge-icon">☕</span>
-                <span>Java & JavaFX (MVC)</span>
-              </div>
-              <div class="floating-badge badge-2 glass-pill">
-                <span class="badge-icon">🗄️</span>
-                <span>SQL & 3NF Normalization</span>
-              </div>
-              <div class="floating-badge badge-3 glass-pill">
-                <span class="badge-icon">⚡</span>
-                <span>Algorithms & Python</span>
-              </div>
-              <div class="floating-badge badge-4 glass-pill">
-                <span class="badge-icon">🛰️</span>
-                <span>IoT & GIS (QGIS/ArcGIS)</span>
-              </div>
+        <!-- Poetic Subtitle -->
+        <p class="hero-subtitle">
+          · TEKNIK INFORMATIKA · ASISTEN LABORATORIUM KOMPUTER · REKAYASA PERANGKAT LUNAK &amp; IOT ·
+        </p>
 
-              <div class="avatar-footer">
-                <div class="avatar-info">
-                  <h4>Alifian Revan Arnanta</h4>
-                  <p>Informatics Engineering • Universitas Pancasila</p>
-                </div>
-                <div class="pulse-indicator" title="Status Aktif"></div>
-              </div>
-            </div>
-          </div>
+        <p class="hero-philosophy">
+          Mendedikasikan pemikiran algoritmik, rancang bangun kode modular, dan arsitektur data terstruktur di Universitas Pancasila.
+        </p>
+
+        <!-- Minimalist Actions -->
+        <div class="hero-cta-group">
+          <a href="#prolog" class="cta-link-clean">
+            <span>Eksplorasi Profil</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <span class="cta-divider">|</span>
+          <a href="#karya" class="cta-link-clean">
+            <span>Karya Terpilih</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
         </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-cue-wrap">
+          <a href="#prolog" class="scroll-cue" aria-label="Gulir ke bawah">
+            <span class="chevron-down"></span>
+            <span class="cue-dot"></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Horizon Planet Silhouette with Explorer Figure -->
+      <div class="planet-horizon-wrap">
+        <svg class="planet-horizon-svg" viewBox="0 0 1440 320" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Planet Curvature Body -->
+          <path d="M0,320 L0,180 C360,90 1080,90 1440,180 L1440,320 Z" fill="#07090f"/>
+          <!-- Horizon atmospheric rim line -->
+          <path d="M0,180 C360,90 1080,90 1440,180" stroke="rgba(226, 232, 240, 0.28)" stroke-width="1.5"/>
+
+          <!-- Explorer Figure Silhouette standing on top crest -->
+          <!-- Position at center x = 720, y ≈ 112 -->
+          <g class="explorer-silhouette" transform="translate(712, 70)">
+            <!-- Flag pole held in hand -->
+            <line x1="2" y1="46" x2="2" y2="4" stroke="#07090f" stroke-width="2"/>
+            <path d="M2,4 L16,9 L2,15 Z" fill="#07090f"/>
+            <!-- Astronaut / Explorer Body -->
+            <circle cx="16" cy="18" r="7" fill="#07090f"/> <!-- Helmet -->
+            <circle cx="18" cy="18" r="3.5" fill="rgba(226, 232, 240, 0.4)"/> <!-- Visor reflection -->
+            <path d="M11,25 C11,25 14,24 18,24 C22,24 25,25 25,25 L23,38 L13,38 Z" fill="#07090f"/> <!-- Torso -->
+            <rect x="7" y="27" width="5" height="10" rx="2" fill="#07090f"/> <!-- Backpack -->
+            <line x1="14" y1="38" x2="12" y2="48" stroke="#07090f" stroke-width="3" stroke-linecap="round"/> <!-- Leg 1 -->
+            <line x1="21" y1="38" x2="22" y2="48" stroke="#07090f" stroke-width="3" stroke-linecap="round"/> <!-- Leg 2 -->
+          </g>
+
+          <!-- Delicate foliage / plants sprouting across the crest (Moonfarmer hallmark) -->
+          <!-- Left side sprouts -->
+          <path d="M520,138 C515,130 514,120 514,120 C514,120 522,122 525,132 Z" fill="#07090f"/>
+          <path d="M528,135 C524,126 527,117 527,117 C527,117 534,120 533,130 Z" fill="#07090f"/>
+          <path d="M580,126 C574,116 575,105 575,105 C575,105 584,108 584,120 Z" fill="#07090f"/>
+          <path d="M590,124 C595,114 605,112 605,112 C605,112 602,122 595,124 Z" fill="#07090f"/>
+          <path d="M640,118 C636,108 638,98 638,98 C638,98 646,102 645,114 Z" fill="#07090f"/>
+
+          <!-- Right side sprouts -->
+          <path d="M780,118 C784,108 782,98 782,98 C782,98 774,102 775,114 Z" fill="#07090f"/>
+          <path d="M840,124 C835,114 825,112 825,112 C825,112 828,122 835,124 Z" fill="#07090f"/>
+          <path d="M850,126 C856,116 855,105 855,105 C855,105 846,108 846,120 Z" fill="#07090f"/>
+          <path d="M910,135 C914,126 911,117 911,117 C911,117 904,120 905,130 Z" fill="#07090f"/>
+        </svg>
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="tentang" class="section-padding bg-surface-alt">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Profil & Latar Belakang</span>
-          <h2 class="section-title">Tentang Saya</h2>
-          <p class="section-subtitle">Dedikasi dalam rekayasa perangkat lunak, pembimbingan praktikum mahasiswa, dan pemecahan masalah komputasi terstruktur.</p>
-        </div>
+    <!-- SECTION 01: PROLOG (TENTANG SAYA) -->
+    <section class="celestial-section" id="prolog">
+      <div class="content-container">
+        <header class="section-badge-header">
+          <span class="numeral-tag">01 / PROLOG</span>
+          <h2 class="editorial-title">Tentang Diri &amp; Filosofi Komputasi</h2>
+          <div class="editorial-line"></div>
+        </header>
 
-        <div class="about-grid">
-          <div class="about-narrative glass-panel">
-            <h3 class="narrative-heading">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-              Ringkasan Profesional
-            </h3>
-            <p>
-              Saya adalah mahasiswa <strong>Teknik Informatika Universitas Pancasila</strong> dengan rekam jejak <strong>1,5 tahun sebagai Asisten Laboratorium Komputer</strong>. Dalam peran asistensi ini, saya aktif memfasilitasi dan membimbing mahasiswa dalam menguasai dasar-dasar pemrograman, logika algoritma, dan konsep komputasi inti.
+        <div class="prolog-layout">
+          <!-- Left: Narrative -->
+          <div class="prolog-narrative">
+            <p class="lead-text">
+              Saya adalah mahasiswa tingkat akhir <strong>Teknik Informatika di Universitas Pancasila</strong> yang mendedikasikan <strong>1,5 tahun pengalaman sebagai Asisten Laboratorium Praktikum</strong>, mendampingi dan mengarahkan mahasiswa dalam memahami logika komputasi mendalam serta rekayasa perangkat lunak modern.
             </p>
             <p>
-              Saya memiliki kompetensi solid dalam <strong>Software Engineering, Full-Stack Web Development, dan Data Science</strong>, dengan keahlian teknis langsung membangun aplikasi modular menggunakan <strong>Java (JavaFX, OOP), JavaScript, HTML5/CSS3, dan Python</strong>. Mahir dalam <strong>Normalisasi Basis Data Relasional (hingga 3NF)</strong> dengan SQL, pemodelan prediktif melalui <strong>Machine Learning</strong>, serta implementasi terapan multidisiplin pada <strong>IoT (Internet of Things) dan GIS (ArcGIS / QGIS)</strong>.
+              Fokus keahlian saya berakar pada <strong>Software Engineering, Full-Stack Web Development, dan Sains Data</strong>, dengan keahlian teknis membangun aplikasi desktop modular menggunakan <strong>Java (JavaFX, OOP, Maven)</strong>, antarmuka web responsif dengan <strong>HTML5/CSS3 dan JavaScript</strong>, serta skrip analitis berbasis <strong>Python</strong>.
             </p>
             <p>
-              Saya memadukan komunikasi teknis yang lugas, alur kerja kolaboratif berbasis Git & GitHub, dan pola pikir analitis untuk merancang serta mengeksekusi solusi perangkat lunak yang bersih, teruji, dan scalable.
+              Dalam ranah manajemen data, saya mahir dalam <strong>Normalisasi Basis Data Relasional hingga 3NF</strong> menggunakan SQL, konstruksi query bertingkat, serta optimasi indeks. Keahlian ini disempurnakan dengan eksplorasi multidisiplin pada rancang bangun <strong>Internet of Things (IoT)</strong> dan analisis spasial citra satelit melalui <strong>ArcGIS &amp; QGIS</strong>.
             </p>
 
-            <div class="personal-info-chips">
-              <div class="info-chip">
-                <span class="chip-label">Domisili:</span>
-                <span class="chip-val">Sawangan, Kota Depok, Jawa Barat</span>
+            <div class="celestial-meta-grid">
+              <div class="meta-item">
+                <span class="meta-label">KOORDINAT DOMISILI</span>
+                <span class="meta-value">Sawangan, Kota Depok, Jawa Barat</span>
               </div>
-              <div class="info-chip">
-                <span class="chip-label">Kampus:</span>
-                <span class="chip-val">Universitas Pancasila, Jakarta Selatan</span>
+              <div class="meta-item">
+                <span class="meta-label">AFILIASI AKADEMIK</span>
+                <span class="meta-value">Universitas Pancasila, Jakarta Selatan</span>
               </div>
-              <div class="info-chip">
-                <span class="chip-label">Email:</span>
-                <span class="chip-val"><a href="mailto:revanarnanta@gmail.com">revanarnanta@gmail.com</a></span>
+              <div class="meta-item">
+                <span class="meta-label">IPK AKADEMIK</span>
+                <span class="meta-value">3.60 / 4.00</span>
               </div>
-              <div class="info-chip">
-                <span class="chip-label">Telepon / WA:</span>
-                <span class="chip-val"><a href="https://wa.me/6282297078296" target="_blank" rel="noopener">082297078296</a></span>
+              <div class="meta-item">
+                <span class="meta-label">STATUS KETERSEDIAAN</span>
+                <span class="meta-value status-available">● Terbuka untuk Magang &amp; Rekayasa</span>
               </div>
             </div>
           </div>
 
-          <!-- 4 Core Pillars -->
-          <div class="about-pillars">
-            <div class="pillar-card glass-panel">
-              <div class="pillar-icon icon-blue">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-              </div>
-              <div class="pillar-text">
-                <h4>Rekayasa Perangkat Lunak</h4>
-                <p>Implementasi modular berbasis OOP (Enkapsulasi, Pewarisan, Polimorfisme), pola arsitektur MVC pada JavaFX, dan prinsip Clean Code.</p>
+          <!-- Right: 4 Core Pillars of Mastery -->
+          <div class="prolog-pillars">
+            <div class="celestial-card">
+              <div class="card-num">I</div>
+              <div class="card-content">
+                <h3>Rekayasa Perangkat Lunak &amp; OOP</h3>
+                <p>Penguasaan 4 pilar OOP (Enkapsulasi, Pewarisan, Polimorfisme, Abstraksi), arsitektur modular MVC pada JavaFX, dan clean code standards.</p>
               </div>
             </div>
 
-            <div class="pillar-card glass-panel">
-              <div class="pillar-icon icon-cyan">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-              </div>
-              <div class="pillar-text">
-                <h4>Arsitektur Basis Data</h4>
-                <p>Normalisasi skema relasional terstruktur (UNF ke 3NF), perancangan ERD, query SQL kompleks (DDL, DML, DCL), dan optimasi indeks data.</p>
+            <div class="celestial-card">
+              <div class="card-num">II</div>
+              <div class="card-content">
+                <h3>Basis Data Relasional &amp; 3NF</h3>
+                <p>Translasi kebutuhan nyata ke ERD, normalisasi sistematis UNF hingga 3NF, query multi-table JOIN kompleks, dan tuning performa indeks.</p>
               </div>
             </div>
 
-            <div class="pillar-card glass-panel">
-              <div class="pillar-icon icon-purple">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5V17a1 1 0 0 1-2 0v-.5a1 1 0 0 1 2 0zm1.75-5.5a2.5 2.5 0 0 1-1.75 2.4V14a1 1 0 0 1-2 0v-1a1 1 0 0 1 1-1 1 1 0 1 0-1-1 1 1 0 0 1-2 0 3 3 0 1 1 5.75 1.5z"></path></svg>
-              </div>
-              <div class="pillar-text">
-                <h4>Algoritma & Struktur Data</h4>
-                <p>Penguasaan struktur data linear & non-linear (BST, Graph), algoritma pencarian & sorting efisien, serta pemecahan masalah rekursif.</p>
+            <div class="celestial-card">
+              <div class="card-num">III</div>
+              <div class="card-content">
+                <h3>Algoritma &amp; Struktur Data</h3>
+                <p>Implementasi tipe data abstrak linear (Linked List, Stack, Queue) dan non-linear (BST, Graph) dengan efisiensi pencarian &amp; sorting.</p>
               </div>
             </div>
 
-            <div class="pillar-card glass-panel">
-              <div class="pillar-icon icon-emerald">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-              </div>
-              <div class="pillar-text">
-                <h4>Sistem Terapan IoT & SIG</h4>
-                <p>Integrasi prototipe sensor terhubung dan logika pemantauan hardware, dikombinasikan dengan analisis citra satelit spasial via QGIS/ArcGIS.</p>
+            <div class="celestial-card">
+              <div class="card-num">IV</div>
+              <div class="card-content">
+                <h3>Sistem Terapan IoT &amp; SIG</h3>
+                <p>Integrasi perangkat sensor telemetri, otomasi monitoring, serta analisis citra satelit dan data geospasial via QGIS dan ArcGIS.</p>
               </div>
             </div>
           </div>
@@ -259,209 +282,214 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
-    <section id="pengalaman" class="section-padding">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Riwayat Profesional</span>
-          <h2 class="section-title">Pengalaman Kerja & Asistensi</h2>
-          <p class="section-subtitle">Perjalanan profesional dalam membimbing ratusan mahasiswa S1 serta pengalaman teknis industri.</p>
+    <!-- SECTION 02: JEJAK LANGKAH (PENGALAMAN KERJA & ASISTENSI) -->
+    <section class="celestial-section bg-deep" id="pengalaman">
+      <div class="content-container">
+        <header class="section-badge-header">
+          <span class="numeral-tag">02 / JEJAK LANGKAH</span>
+          <h2 class="editorial-title">Pengalaman Kerja &amp; Asistensi Laboratorium</h2>
+          <p class="section-intro">Riwayat bimbingan praktikum komputasi mahasiswa sarjana dan rekam jejak teknis industri.</p>
+          <div class="editorial-line"></div>
+        </header>
+
+        <!-- Filter Controls -->
+        <div class="celestial-filter-bar">
+          <button class="filter-link active" data-filter="all">[ SEMUA REKAM JEJAK ]</button>
+          <button class="filter-link" data-filter="lab">[ ASISTEN LABORATORIUM ]</button>
+          <button class="filter-link" data-filter="industry">[ INDUSTRI TEKNIS ]</button>
         </div>
 
-        <!-- Filter tabs -->
-        <div class="experience-filters">
-          <button class="filter-btn active" data-filter="all">Semua Pengalaman</button>
-          <button class="filter-btn" data-filter="lab">Asisten Laboratorium</button>
-          <button class="filter-btn" data-filter="industry">Industri & Manufaktur</button>
+        <div class="constellation-timeline">
+          <!-- Experience 1: Lab OOP & Java -->
+          <article class="timeline-node" data-category="lab">
+            <div class="node-marker">
+              <span class="node-star">✦</span>
+              <span class="node-year">2026</span>
+            </div>
+            <div class="node-card">
+              <div class="node-header">
+                <div>
+                  <span class="node-pill">Asistensi Praktikum S1</span>
+                  <h3 class="node-role">Asisten Dosen Laboratorium — Pemrograman Berorientasi Objek &amp; Java</h3>
+                  <h4 class="node-org">Universitas Pancasila · Jakarta Selatan, DKI Jakarta</h4>
+                </div>
+                <span class="node-duration">Sep 2026 – Sekarang</span>
+              </div>
+              <ul class="node-bullets">
+                <li><strong>Instruksi &amp; Mentorship:</strong> Memfasilitasi sesi praktikum laboratorium mingguan untuk mahasiswa S1, membimbing logika komputasi inti, pemikiran algoritmik terstruktur, dan konvensi pengembangan perangkat lunak modern.</li>
+                <li><strong>Fondasi 4 Pilar OOP:</strong> Membimbing mahasiswa mendalami dan menerapkan pilar utama OOP: <em>Encapsulation, Inheritance, Polymorphism,</em> dan <em>Data Abstraction</em> melalui latihan studi kasus nyata.</li>
+                <li><strong>Arsitektur Modular &amp; Reusabilitas:</strong> Mengajarkan implementasi <em>Interfaces, Abstract Classes,</em> dan <em>Method Overriding/Overloading</em> untuk menciptakan struktur kode yang bersih, minim ketergantungan, dan mudah dipelihara.</li>
+                <li><strong>Antarmuka Grafis (GUI) &amp; Pola MVC:</strong> Mendampingi pembuatan aplikasi desktop interaktif dengan <strong>JavaFX &amp; FXML</strong>, menekankan pemisahan tanggung jawab kode melalui pola <em>Model-View-Controller</em>.</li>
+                <li><strong>Review Kode &amp; Debugging:</strong> Menjalankan sesi debugging langsung, mendiagnosis galat logika dan stack trace secara metodis, serta mengevaluasi penugasan praktikum berpedoman pada standar clean code.</li>
+              </ul>
+              <div class="node-tags">
+                <span>#Java</span>
+                <span>#JavaFX</span>
+                <span>#FXML</span>
+                <span>#OOP</span>
+                <span>#MVC</span>
+                <span>#Maven</span>
+                <span>#CleanCode</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Experience 2: Lab Database Relasional -->
+          <article class="timeline-node" data-category="lab">
+            <div class="node-marker">
+              <span class="node-star">✦</span>
+              <span class="node-year">2026</span>
+            </div>
+            <div class="node-card">
+              <div class="node-header">
+                <div>
+                  <span class="node-pill">Asistensi Praktikum S1</span>
+                  <h3 class="node-role">Asisten Dosen Laboratorium — Sistem Basis Data Relasional</h3>
+                  <h4 class="node-org">Universitas Pancasila · Jakarta Selatan, DKI Jakarta</h4>
+                </div>
+                <span class="node-duration">Sep 2026 – Sekarang</span>
+              </div>
+              <ul class="node-bullets">
+                <li><strong>Instruksi &amp; Mentoring Basis Data:</strong> Memimpin sesi laboratorium untuk mahasiswa S1, mengajarkan teori relasional fundamental hingga tingkat menengah, pemodelan data entitas, dan eksekusi query SQL praktis.</li>
+                <li><strong>Desain Skema Relasional &amp; Normalisasi (UNF - 3NF):</strong> Membimbing perancangan basis data dari studi kasus bisnis ke <em>Entity-Relationship Diagram (ERD)</em> serta mengeksekusi normalisasi database sistematis dari <strong>UNF hingga 3NF</strong> guna mengeliminasi anomali dan redundansi data.</li>
+                <li><strong>Penguasaan SQL (DDL, DML, DCL):</strong> Menginstruksikan pembuatan dan manipulasi skema basis data, query filtering bertingkat, serta fungsi agregasi dan pengelompokan data (<code>GROUP BY</code>, <code>HAVING</code>).</li>
+                <li><strong>Multi-Table Joins &amp; Subquery Bersarang:</strong> Membimbing penyusunan query relasional multi-tabel memanfaatkan variasi operasi <code>JOIN</code> (<code>INNER</code>, <code>LEFT</code>, <code>RIGHT</code>) dan subquery bersarang untuk ekstraksi informasi kompleks.</li>
+                <li><strong>Optimasi Performa &amp; Pengindeksan (Indexing):</strong> Memperkenalkan konsep fundamental tuning efisiensi query, pemanfaatan Indexes untuk mempercepat pencarian data, serta analisis alur execution plan query.</li>
+                <li><strong>Evaluasi &amp; Diagnostic Query:</strong> Menilai tugas dan ujian praktikum, mendiagnosis sintaks SQL yang tidak efisien, serta mempromosikan praktik terbaik pengelolaan RDBMS.</li>
+              </ul>
+              <div class="node-tags">
+                <span>#SQL</span>
+                <span>#RDBMS</span>
+                <span>#ERD</span>
+                <span>#DatabaseNormalization</span>
+                <span>#3NF</span>
+                <span>#Joins</span>
+                <span>#QueryOptimization</span>
+                <span>#Indexing</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Experience 3: Lab Struktur Data & Algoritma -->
+          <article class="timeline-node" data-category="lab">
+            <div class="node-marker">
+              <span class="node-star">✦</span>
+              <span class="node-year">2025</span>
+            </div>
+            <div class="node-card">
+              <div class="node-header">
+                <div>
+                  <span class="node-pill">Asistensi Praktikum S1</span>
+                  <h3 class="node-role">Asisten Dosen Laboratorium — Struktur Data &amp; Algoritma</h3>
+                  <h4 class="node-org">Universitas Pancasila · Jakarta Selatan, DKI Jakarta</h4>
+                </div>
+                <span class="node-duration">Sep 2025 – Feb 2026</span>
+              </div>
+              <ul class="node-bullets">
+                <li><strong>Instruksi Lab &amp; Pemecahan Masalah:</strong> Memfasilitasi praktikum langsung mengenai implementasi <em>Abstract Data Types (ADT)</em>, manajemen alokasi pointer memori, dan teknik pemecahan masalah algoritma komputasi.</li>
+                <li><strong>Struktur Data Linear:</strong> Mengajarkan implementasi mendalam pada Array, Dynamic Array, Singly &amp; Doubly Linked Lists, Stacks (LIFO), dan Queues (FIFO, circular, priority queue).</li>
+                <li><strong>Struktur Data Non-Linear:</strong> Membimbing pemodelan pohon hierarkis dan graf berjejaring, mencakup Binary Tree, <em>Binary Search Tree (BST)</em>, teknik penelusuran pohon (In-order, Pre-order, Post-order), serta representasi Graf (Adjacency Matrix &amp; List).</li>
+                <li><strong>Algoritma Pencarian &amp; Pengurutan:</strong> Membimbing komparasi efisiensi algoritma pengurutan (Bubble, Selection, Insertion, Merge, Quick Sort) dan algoritma pencarian (Linear &amp; Binary Search).</li>
+                <li><strong>Rekursi &amp; Paradigma Divide-and-Conquer:</strong> Menguraikan pemecahan problem kompleks berbasis rekursif dengan fokus ketat pada identifikasi base-case dan kontrol kedalaman call-stack untuk mencegah stack overflow.</li>
+              </ul>
+              <div class="node-tags">
+                <span>#StrukturData</span>
+                <span>#Algoritma</span>
+                <span>#BST</span>
+                <span>#Graph</span>
+                <span>#LinkedList</span>
+                <span>#DivideAndConquer</span>
+                <span>#SortingSearching</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Experience 4: Operator Digital Printing -->
+          <article class="timeline-node" data-category="industry">
+            <div class="node-marker">
+              <span class="node-star">✦</span>
+              <span class="node-year">2022</span>
+            </div>
+            <div class="node-card">
+              <div class="node-header">
+                <div>
+                  <span class="node-pill">Industri Manufaktur</span>
+                  <h3 class="node-role">Operator Digital Printing</h3>
+                  <h4 class="node-org">Proxy Media Digital Printing · Depok, Jawa Barat</h4>
+                </div>
+                <span class="node-duration">Nov 2022 – Apr 2023</span>
+              </div>
+              <ul class="node-bullets">
+                <li><strong>Quality Assurance:</strong> Mengevaluasi kualitas bahan baku, komponen operasional, dan hasil cetak akhir, menyaring produk yang tidak memenuhi spesifikasi demi menjaga mutu prima.</li>
+                <li><strong>Kalibrasi Mesin Presisi:</strong> Menyiapkan, mengalibrasi parameter operasional mesin cetak digital berkapasitas tinggi sebelum menjalankan siklus produksi.</li>
+                <li><strong>Pencapaian Target Produksi:</strong> Secara konsisten melampaui target volume kerja harian tepat waktu dengan standar kepatuhan kualitas yang ketat.</li>
+                <li><strong>Pemecahan Masalah (Troubleshooting):</strong> Melakukan investigasi dan perbaikan cepat saat terjadi kendala mesin, mendeteksi dan menyelesaikan permasalahan mekanis secara efisien.</li>
+              </ul>
+              <div class="node-tags">
+                <span>#KalibrasiMesin</span>
+                <span>#QualityControl</span>
+                <span>#Troubleshooting</span>
+                <span>#SOP</span>
+                <span>#ManajemenProduksi</span>
+              </div>
+            </div>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <div class="timeline-container">
-          <!-- Item 1: Lab OOP & Java -->
-          <div class="timeline-item" data-category="lab">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel">
-              <div class="timeline-header">
-                <div>
-                  <span class="timeline-badge badge-primary">Asistensi Akademik</span>
-                  <h3 class="timeline-role">Asisten Dosen Laboratorium — Pemrograman Berorientasi Objek & Java</h3>
-                  <h4 class="timeline-org">Universitas Pancasila, Jakarta Selatan, DKI Jakarta</h4>
-                </div>
-                <div class="timeline-date">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                  <span>Sep 2026 – Sekarang</span>
-                </div>
-              </div>
+    <!-- SECTION 03: PENDIDIKAN FORMAL -->
+    <section class="celestial-section" id="pendidikan">
+      <div class="content-container">
+        <header class="section-badge-header">
+          <span class="numeral-tag">03 / PENDIDIKAN</span>
+          <h2 class="editorial-title">Fondasi Pendidikan Akademis</h2>
+          <div class="editorial-line"></div>
+        </header>
 
-              <div class="timeline-body">
-                <ul class="task-list">
-                  <li>
-                    <strong>Instruksi & Mentorship Mahasiswa:</strong> Memfasilitasi sesi praktikum laboratorium mingguan untuk mahasiswa S1, memberikan bimbingan mengenai fundamental komputasi inti, pemikiran algoritmik, dan praktik rekayasa perangkat lunak modern.
-                  </li>
-                  <li>
-                    <strong>Fondasi 4 Pilar OOP:</strong> Membimbing mahasiswa menguasai pilar utama Object-Oriented Programming (<em>Encapsulation, Inheritance, Polymorphism, Data Abstraction</em>) melalui studi kasus dan latihan pemrograman praktis.
-                  </li>
-                  <li>
-                    <strong>Arsitektur Modular & Reusabilitas Kode:</strong> Mengajarkan implementasi <em>Interfaces, Abstract Classes,</em> serta <em>Method Overriding/Overloading</em> untuk merancang struktur aplikasi yang bersih, terawat, dan berdaya guna ulang tinggi.
-                  </li>
-                  <li>
-                    <strong>Pengembangan Antarmuka GUI & Pola MVC:</strong> Mendampingi pembelajaran aplikasi desktop berbasis antarmuka grafis menggunakan <strong>JavaFX dengan FXML</strong>, mengenalkan pemisahan tanggung jawab kode melalui pola <em>Model-View-Controller (MVC)</em>.
-                  </li>
-                  <li>
-                    <strong>Code Review & Diagnostic Debugging:</strong> Menjalankan sesi debugging langsung, mendiagnosis kesalahan logika dan stack trace secara metodis, serta mengevaluasi tugas praktikum mahasiswa berdasarkan standar clean code.
-                  </li>
-                </ul>
-
-                <div class="timeline-tags">
-                  <span class="tag">Java</span>
-                  <span class="tag">JavaFX</span>
-                  <span class="tag">FXML</span>
-                  <span class="tag">OOP Pillars</span>
-                  <span class="tag">MVC Pattern</span>
-                  <span class="tag">Maven</span>
-                  <span class="tag">Clean Code</span>
-                </div>
-              </div>
-            </div>
+        <div class="academic-monolith">
+          <div class="academic-crest">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
           </div>
 
-          <!-- Item 2: Lab Database -->
-          <div class="timeline-item" data-category="lab">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel">
-              <div class="timeline-header">
-                <div>
-                  <span class="timeline-badge badge-cyan">Asistensi Akademik</span>
-                  <h3 class="timeline-role">Asisten Dosen Laboratorium — Sistem Basis Data Relasional</h3>
-                  <h4 class="timeline-org">Universitas Pancasila, Jakarta Selatan, DKI Jakarta</h4>
-                </div>
-                <div class="timeline-date">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                  <span>Sep 2026 – Sekarang</span>
-                </div>
-              </div>
-
-              <div class="timeline-body">
-                <ul class="task-list">
-                  <li>
-                    <strong>Instruksi Praktikum & Mentoring Database:</strong> Memimpin sesi laboratorium untuk mahasiswa S1, mengajarkan konsep basis data relasional fundamental hingga tingkat menengah, pemodelan data, dan eksekusi query praktis.
-                  </li>
-                  <li>
-                    <strong>Desain Skema Relasional & Normalisasi (3NF):</strong> Membimbing mahasiswa mentranslasikan kebutuhan bisnis nyata ke dalam <em>Entity-Relationship Diagram (ERD)</em> serta mengeksekusi normalisasi database sistematis dari <strong>UNF hingga 3NF</strong> untuk menghilangkan redundansi data dan menjaga integritas relasional.
-                  </li>
-                  <li>
-                    <strong>Penguasaan SQL (DDL, DML, DCL):</strong> Mengajarkan pembuatan, modifikasi, dan manajemen skema dengan <em>Data Definition Language (DDL)</em> serta latihan <em>Data Manipulation Language (DML)</em> untuk filtering kompleks, grouping, dan agregasi data (<code>GROUP BY</code>, <code>HAVING</code>).
-                  </li>
-                  <li>
-                    <strong>Multi-Table Joins & Nested Subqueries:</strong> Membimbing konstruksi query relasional multi-tabel menggunakan berbagai operasi <code>JOIN</code> (<code>INNER</code>, <code>LEFT</code>, <code>RIGHT</code>) dan subquery bersarang untuk mengekstraksi wawasan berharga dari data ternormalisasi.
-                  </li>
-                  <li>
-                    <strong>Tuning Performa & Pengindeksan (Indexing):</strong> Mengenalkan konsep fundamental optimasi performa query, mencakup pemanfaatan <em>Indexes</em> guna mempercepat pencarian data serta analisis perilaku rencana eksekusi query.
-                  </li>
-                  <li>
-                    <strong>Evaluasi Kode & Debugging Query:</strong> Menilai penugasan lab dan ujian praktikum, meninjau skrip SQL, memperbaiki error sintaks query, serta mempromosikan praktik terbaik pengelolaan RDBMS.
-                  </li>
-                </ul>
-
-                <div class="timeline-tags">
-                  <span class="tag">SQL</span>
-                  <span class="tag">RDBMS</span>
-                  <span class="tag">ERD</span>
-                  <span class="tag">Database Normalization (3NF)</span>
-                  <span class="tag">Multi-Table JOIN</span>
-                  <span class="tag">Query Optimization</span>
-                  <span class="tag">Indexing</span>
-                </div>
-              </div>
+          <div class="academic-meta">
+            <div class="academic-top-line">
+              <span class="program-badge">PROGRAM SARJANA (S1)</span>
+              <span class="gpa-badge">IPK: 3.60 / 4.00</span>
             </div>
+            <h3 class="academic-degree">S1 Teknik Informatika (Informatics Engineering)</h3>
+            <h4 class="academic-campus">Universitas Pancasila · Jakarta Selatan</h4>
+            <span class="academic-period">September 2024 – Sekarang</span>
           </div>
 
-          <!-- Item 3: Lab Data Structures -->
-          <div class="timeline-item" data-category="lab">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel">
-              <div class="timeline-header">
-                <div>
-                  <span class="timeline-badge badge-purple">Asistensi Akademik</span>
-                  <h3 class="timeline-role">Asisten Dosen Laboratorium — Struktur Data & Algoritma</h3>
-                  <h4 class="timeline-org">Universitas Pancasila, Jakarta Selatan, DKI Jakarta</h4>
-                </div>
-                <div class="timeline-date">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                  <span>Sep 2025 – Feb 2026</span>
-                </div>
+          <div class="academic-focus-area">
+            <h4 class="focus-title">Bidang Kajian Akademik &amp; Penerapan Riil:</h4>
+            <div class="focus-quad-grid">
+              <div class="focus-cell">
+                <span class="cell-num">01</span>
+                <h5>Software Development &amp; OOP</h5>
+                <p>Mengembangkan aplikasi desktop berorientasi objek dengan Java dan JavaFX menggunakan Maven, berpedoman teguh pada pilar enkapsulasi, pewarisan, dan polimorfisme.</p>
               </div>
 
-              <div class="timeline-body">
-                <ul class="task-list">
-                  <li>
-                    <strong>Instruksi Lab & Algorithmic Problem Solving:</strong> Memfasilitasi praktikum langsung, membimbing mahasiswa dalam implementasi tipe data abstrak (<em>Abstract Data Types</em>), manajemen alokasi memori, dan teknik pemecahan masalah komputasi.
-                  </li>
-                  <li>
-                    <strong>Struktur Data Linear:</strong> Mengajarkan implementasi dan manipulasi struktur linear bertahap mencakup Array, Dynamic Array, Singly & Doubly Linked Lists, Stacks (LIFO), dan Queues (FIFO, Circular Queue, Priority Queue).
-                  </li>
-                  <li>
-                    <strong>Struktur Data Non-Linear:</strong> Membimbing pemodelan hierarkis dan jaringan, mendemonstrasikan implementasi berbasis simpul (node) pada <em>Binary Trees</em>, <em>Binary Search Trees (BST)</em>, teknik penelusuran pohon (<em>In-order, Pre-order, Post-order</em>), serta representasi Graf (<em>Adjacency Matrix & List</em>).
-                  </li>
-                  <li>
-                    <strong>Algoritma Pencarian & Pengurutan:</strong> Membimbing implementasi perbandingan algoritma sorting (Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort) serta algoritma pencarian Linear Search dan Binary Search.
-                  </li>
-                  <li>
-                    <strong>Rekursi & Divide-and-Conquer:</strong> Membantu mahasiswa memecah problem komputasional kompleks menggunakan fungsi rekursif dan paradigma Divide-and-Conquer dengan penekanan pada identifikasi base-case dan perilaku call-stack untuk menghindari stack overflow.
-                  </li>
-                </ul>
-
-                <div class="timeline-tags">
-                  <span class="tag">Struktur Data</span>
-                  <span class="tag">Algoritma</span>
-                  <span class="tag">Binary Search Tree</span>
-                  <span class="tag">Graph</span>
-                  <span class="tag">Linked Lists</span>
-                  <span class="tag">Divide & Conquer</span>
-                  <span class="tag">Sorting & Searching</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 4: Digital Printing Operator -->
-          <div class="timeline-item" data-category="industry">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel">
-              <div class="timeline-header">
-                <div>
-                  <span class="timeline-badge badge-emerald">Industri Teknis</span>
-                  <h3 class="timeline-role">Operator Digital Printing</h3>
-                  <h4 class="timeline-org">Proxy Media Digital Printing, Depok, Jawa Barat</h4>
-                </div>
-                <div class="timeline-date">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                  <span>Nov 2022 – Apr 2023</span>
-                </div>
+              <div class="focus-cell">
+                <span class="cell-num">02</span>
+                <h5>Web Engineering &amp; Version Control</h5>
+                <p>Membangun antarmuka situs interaktif dengan HTML5, CSS3, dan JavaScript (manipulasi DOM dan dynamic events) dengan manajemen repositori kolaboratif Git &amp; GitHub.</p>
               </div>
 
-              <div class="timeline-body">
-                <ul class="task-list">
-                  <li>
-                    <strong>Quality Assurance & Standar Mutu:</strong> Mengevaluasi kualitas bahan baku, komponen operasional, dan hasil cetak akhir; menyeleksi dan menyortir produk yang tidak sesuai standar demi menjamin kepuasan klien.
-                  </li>
-                  <li>
-                    <strong>Setup & Kalibrasi Mesin Presisi:</strong> Menyiapkan, mengalibrasi parameter operasional, dan memulai mesin digital printing berkecepatan tinggi sebelum memulai siklus produksi.
-                  </li>
-                  <li>
-                    <strong>Pencapaian Target Produksi:</strong> Secara konsisten melampaui target volume kerja harian dengan ketepatan waktu tinggi dan kepatuhan standar mutu tanpa kompromi.
-                  </li>
-                  <li>
-                    <strong>Troubleshooting & Pemeliharaan Teknis:</strong> Melakukan investigasi dan perbaikan cepat saat terjadi malfungsi mesin produksi, mendeteksi sumber permasalahan mekanis/sistem secara efisien.
-                  </li>
-                </ul>
+              <div class="focus-cell">
+                <span class="cell-num">03</span>
+                <h5>Database Design &amp; Architecture</h5>
+                <p>Mengeksekusi normalisasi basis data komprehensif (UNF ke 3NF) serta merancang struktur relasional konsisten menggunakan SQL dalam sistem RDBMS.</p>
+              </div>
 
-                <div class="timeline-tags">
-                  <span class="tag">Kalibrasi Mesin</span>
-                  <span class="tag">Quality Control</span>
-                  <span class="tag">Troubleshooting</span>
-                  <span class="tag">Manajemen Target</span>
-                  <span class="tag">Standard Operating Procedure</span>
-                </div>
+              <div class="focus-cell">
+                <span class="cell-num">04</span>
+                <h5>Applied Systems, IoT &amp; GIS</h5>
+                <p>Merancang prototipe alur kerja sensor IoT beserta logika pemantauan terpadu, dikombinasikan dengan digitalisasi spasial dan analisis citra satelit pada ArcGIS dan QGIS.</p>
               </div>
             </div>
           </div>
@@ -469,321 +497,262 @@
       </div>
     </section>
 
-    <!-- EDUCATION SECTION -->
-    <section id="pendidikan" class="section-padding bg-surface-alt">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Latar Belakang Akademis</span>
-          <h2 class="section-title">Pendidikan</h2>
-          <p class="section-subtitle">Fondasi formal dalam ilmu komputer dan rekayasa teknologi informasi modern.</p>
-        </div>
+    <!-- SECTION 04: KONSTELASI KEAHLIAN -->
+    <section class="celestial-section bg-deep" id="keahlian">
+      <div class="content-container">
+        <header class="section-badge-header">
+          <span class="numeral-tag">04 / KEAHLIAN</span>
+          <h2 class="editorial-title">Konstelasi Keahlian &amp; Kompetensi</h2>
+          <p class="section-intro">Spektrum keterampilan teknis yang teruji melalui asistensi praktikum laboratorium dan perkuliahan.</p>
+          <div class="editorial-line"></div>
+        </header>
 
-        <div class="education-card glass-panel">
-          <div class="edu-top">
-            <div class="edu-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-            </div>
-            <div class="edu-meta">
-              <div class="edu-badge-row">
-                <span class="badge-tag">Program Sarjana (S1)</span>
-                <span class="ipk-badge">IPK: 3.60 / 4.00</span>
-              </div>
-              <h3 class="edu-degree">S1 Teknik Informatika (Informatics Engineering)</h3>
-              <h4 class="edu-institution">Universitas Pancasila, Jakarta Selatan</h4>
-              <span class="edu-period">September 2024 – Sekarang</span>
-            </div>
-          </div>
-
-          <div class="edu-body">
-            <h4 class="edu-section-title">Fokus Kurikulum & Capaian Praktik Akademis:</h4>
-            <div class="edu-focus-grid">
-              <div class="edu-focus-item">
-                <div class="focus-title">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Software Development & OOP</span>
-                </div>
-                <p>Membangun aplikasi desktop modular dengan Java dan JavaFX memanfaatkan Maven, mematuhi paradigma OOP inti seperti Enkapsulasi, Pewarisan, dan Polimorfisme.</p>
-              </div>
-
-              <div class="edu-focus-item">
-                <div class="focus-title">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Web Engineering & Version Control</span>
-                </div>
-                <p>Merancang antarmuka web responsif dan interaktif menggunakan HTML5, CSS3, dan JavaScript (manipulasi DOM dan dynamic event handling) dengan kolaborasi Git & GitHub.</p>
-              </div>
-
-              <div class="edu-focus-item">
-                <div class="focus-title">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Database Design & Architecture</span>
-                </div>
-                <p>Mengeksekusi normalisasi database menyeluruh dari UNF hingga 3NF serta merancang skema relasional terstruktur menggunakan SQL di dalam RDBMS.</p>
-              </div>
-
-              <div class="edu-focus-item">
-                <div class="focus-title">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Applied Systems, IoT & GIS</span>
-                </div>
-                <p>Merancang alur kerja prototipe IoT yang memadukan sensor dan logika monitoring, serta melakukan digitalisasi data spasial dan analisis citra satelit dengan ArcGIS dan QGIS.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS SECTION -->
-    <section id="keahlian" class="section-padding">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Keahlian & Kemampuan Teknis</span>
-          <h2 class="section-title">Keahlian Teknis</h2>
-          <p class="section-subtitle">Kompetensi yang diasah melalui asistensi laboratorium dan proyek perkuliahan rekayasa perangkat lunak.</p>
-        </div>
-
-        <div class="skills-category-grid">
-          <!-- Card 1: Programming Languages -->
-          <div class="skill-category-card glass-panel">
-            <div class="skill-cat-header">
-              <div class="cat-icon icon-blue">💻</div>
+        <div class="skills-celestial-matrix">
+          <!-- Col 1: Languages -->
+          <div class="matrix-card">
+            <div class="matrix-header">
+              <span class="matrix-icon">⌨</span>
               <h3>Bahasa Pemrograman</h3>
             </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-info">
+            <ul class="matrix-list">
+              <li>
+                <div class="matrix-label-row">
                   <span>Java (JavaFX, OOP, Maven)</span>
-                  <span class="skill-pct">Lanjutan</span>
+                  <span class="matrix-level">Tingkat Lanjut</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 90%;"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Python (Scripting & ML)</span>
-                  <span class="skill-pct">Mahir</span>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 92%;"></div></div>
+              </li>
+              <li>
+                <div class="matrix-label-row">
+                  <span>Python (Scripting &amp; ML)</span>
+                  <span class="matrix-level">Mahir</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 85%;"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>JavaScript (ES6+ & DOM)</span>
-                  <span class="skill-pct">Mahir</span>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 86%;"></div></div>
+              </li>
+              <li>
+                <div class="matrix-label-row">
+                  <span>JavaScript (ES6+ &amp; DOM)</span>
+                  <span class="matrix-level">Mahir</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 82%;"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>C# & .NET Framework</span>
-                  <span class="skill-pct">Menengah</span>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 84%;"></div></div>
+              </li>
+              <li>
+                <div class="matrix-label-row">
+                  <span>C# &amp; .NET Framework</span>
+                  <span class="matrix-level">Menengah</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 75%;"></div></div>
-              </div>
-            </div>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 75%;"></div></div>
+              </li>
+            </ul>
           </div>
 
-          <!-- Card 2: Web & Frontend -->
-          <div class="skill-category-card glass-panel">
-            <div class="skill-cat-header">
-              <div class="cat-icon icon-cyan">🌐</div>
-              <h3>Web & Desain Antarmuka</h3>
+          <!-- Col 2: Web & Frontend -->
+          <div class="matrix-card">
+            <div class="matrix-header">
+              <span class="matrix-icon">🌐</span>
+              <h3>Web &amp; Desain Antarmuka</h3>
             </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>HTML5 & CSS3 Mastery</span>
-                  <span class="skill-pct">Penguasaan Tinggi</span>
+            <ul class="matrix-list">
+              <li>
+                <div class="matrix-label-row">
+                  <span>HTML5 &amp; CSS3 Mastery</span>
+                  <span class="matrix-level">Penguasaan Tinggi</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 95%;"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Prinsip Desain UI & UX</span>
-                  <span class="skill-pct">Mahir</span>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 95%;"></div></div>
+              </li>
+              <li>
+                <div class="matrix-label-row">
+                  <span>Prinsip Desain UX &amp; UI</span>
+                  <span class="matrix-level">Mahir</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 80%;"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Responsive & Adaptive Design</span>
-                  <span class="skill-pct">Mahir</span>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 82%;"></div></div>
+              </li>
+              <li>
+                <div class="matrix-label-row">
+                  <span>Responsive Web Engineering</span>
+                  <span class="matrix-level">Mahir</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 88%;"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Dynamic Event Handling</span>
-                  <span class="skill-pct">Mahir</span>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 90%;"></div></div>
+              </li>
+              <li>
+                <div class="matrix-label-row">
+                  <span>Dynamic Event Manipulation</span>
+                  <span class="matrix-level">Mahir</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 84%;"></div></div>
-              </div>
-            </div>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 85%;"></div></div>
+              </li>
+            </ul>
           </div>
 
-          <!-- Card 3: Database & Normalization -->
-          <div class="skill-category-card glass-panel">
-            <div class="skill-cat-header">
-              <div class="cat-icon icon-emerald">🗄️</div>
-              <h3>Basis Data & Arsitektur</h3>
+          <!-- Col 3: Database & Normalization -->
+          <div class="matrix-card">
+            <div class="matrix-header">
+              <span class="matrix-icon">🗄</span>
+              <h3>Basis Data &amp; Normalisasi</h3>
             </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-info">
+            <ul class="matrix-list">
+              <li>
+                <div class="matrix-label-row">
                   <span>SQL Relasional (DDL, DML, DCL)</span>
-                  <span class="skill-pct">Lanjutan</span>
+                  <span class="matrix-level">Tingkat Lanjut</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 92%;"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 92%;"></div></div>
+              </li>
+              <li>
+                <div class="matrix-label-row">
                   <span>Normalisasi Database (UNF - 3NF)</span>
-                  <span class="skill-pct">Penguasaan Penuh</span>
+                  <span class="matrix-level">Penguasaan Penuh</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 95%;"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Multi-Table JOIN & Subqueries</span>
-                  <span class="skill-pct">Lanjutan</span>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 95%;"></div></div>
+              </li>
+              <li>
+                <div class="matrix-label-row">
+                  <span>Multi-Table Joins &amp; Indexing</span>
+                  <span class="matrix-level">Tingkat Lanjut</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 90%;"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>MongoDB (NoSQL Databases)</span>
-                  <span class="skill-pct">Familiar</span>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 88%;"></div></div>
+              </li>
+              <li>
+                <div class="matrix-label-row">
+                  <span>MongoDB (NoSQL Document Store)</span>
+                  <span class="matrix-level">Familiar</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 72%;"></div></div>
-              </div>
-            </div>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 72%;"></div></div>
+              </li>
+            </ul>
           </div>
 
-          <!-- Card 4: AI, IoT & Tools -->
-          <div class="skill-category-card glass-panel">
-            <div class="skill-cat-header">
-              <div class="cat-icon icon-purple">⚙️</div>
-              <h3>AI, Sistem Terapan & Alat</h3>
+          <!-- Col 4: Systems & Tools -->
+          <div class="matrix-card">
+            <div class="matrix-header">
+              <span class="matrix-icon">⚙</span>
+              <h3>Sistem Terapan, AI &amp; Alat</h3>
             </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Git & GitHub (Workflow Kolaboratif)</span>
-                  <span class="skill-pct">Lanjutan</span>
+            <ul class="matrix-list">
+              <li>
+                <div class="matrix-label-row">
+                  <span>Git &amp; GitHub (Kolaborasi Tim)</span>
+                  <span class="matrix-level">Tingkat Lanjut</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 90%;"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Fondasi AI & Machine Learning</span>
-                  <span class="skill-pct">Menengah</span>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 90%;"></div></div>
+              </li>
+              <li>
+                <div class="matrix-label-row">
+                  <span>Fondasi AI &amp; Machine Learning</span>
+                  <span class="matrix-level">Menengah</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 78%;"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>GIS Spasial (ArcGIS & QGIS)</span>
-                  <span class="skill-pct">Menengah</span>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 78%;"></div></div>
+              </li>
+              <li>
+                <div class="matrix-label-row">
+                  <span>Sistem Informasi Geografis (ArcGIS / QGIS)</span>
+                  <span class="matrix-level">Menengah</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 76%;"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span>Peralatan Lab & Kalibrasi Mesin</span>
-                  <span class="skill-pct">Tersertifikasi</span>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 76%;"></div></div>
+              </li>
+              <li>
+                <div class="matrix-label-row">
+                  <span>Peralatan Lab &amp; Kalibrasi Presisi</span>
+                  <span class="matrix-level">Tersertifikasi</span>
                 </div>
-                <div class="skill-bar"><div class="bar-fill" style="width: 88%;"></div></div>
-              </div>
-            </div>
+                <div class="matrix-track"><div class="matrix-thumb" style="width: 88%;"></div></div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="proyek" class="section-padding bg-surface-alt">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Implementasi Teknis & Portofolio</span>
-          <h2 class="section-title">Proyek & Karya Pilihan</h2>
-          <p class="section-subtitle">Aplikasi nyata yang mengintegrasikan rekayasa perangkat lunak desktop, arsitektur basis data, serta sistem IoT & spasial.</p>
-        </div>
+    <!-- SECTION 05: KARYA & PROYEK PILIHAN -->
+    <section class="celestial-section" id="karya">
+      <div class="content-container">
+        <header class="section-badge-header">
+          <span class="numeral-tag">05 / KARYA PILIHAN</span>
+          <h2 class="editorial-title">Karya &amp; Eksplorasi Rekayasa</h2>
+          <p class="section-intro">Implementasi sistem perangkat lunak nyata berlandaskan modul praktikum dan kurikulum sarjana.</p>
+          <div class="editorial-line"></div>
+        </header>
 
-        <div class="projects-grid">
-          <!-- Project 1: JavaFX Desktop -->
-          <div class="project-card glass-panel">
-            <div class="project-thumb">
+        <div class="works-celestial-grid">
+          <!-- Work 1: JavaFX Desktop -->
+          <div class="work-card">
+            <div class="work-frame">
               <img src="assets/img/projects/javafx-mvc.jpg" alt="Aplikasi Desktop JavaFX Modular" loading="lazy">
-              <div class="project-category-badge">Software Engineering</div>
+              <div class="work-overlay"></div>
+              <span class="work-pill">SOFTWARE ARCHITECTURE</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Aplikasi Desktop Modular JavaFX & Maven (Arsitektur MVC)</h3>
-              <p class="project-desc">
-                Aplikasi desktop enterprise yang dibangun dengan Java dan JavaFX FXML, menerapkan pemisahan tanggung jawab Model-View-Controller (MVC) secara ketat serta fondasi 4 pilar OOP.
+            <div class="work-info">
+              <h3 class="work-title">Aplikasi Desktop Modular JavaFX &amp; Maven (MVC)</h3>
+              <p class="work-desc">
+                Rancang bangun aplikasi desktop interaktif berbasis antarmuka JavaFX dan FXML, mengimplementasikan pemisahan tanggung jawab arsitektural Model-View-Controller secara disiplin dan penerapan murni 4 pilar OOP.
               </p>
-              <div class="project-features">
-                <span>✓ Antarmuka FXML Responsif</span>
-                <span>✓ Validasi Input & Custom Exceptions</span>
-                <span>✓ Manajemen Maven Build Lifecycle</span>
+              <div class="work-attributes">
+                <span>✓ Pemisahan Model-View-Controller</span>
+                <span>✓ Manajemen Siklus Hidup Maven</span>
+                <span>✓ Penanganan Eksepsi &amp; Validasi Input</span>
               </div>
-              <div class="project-tech">
+              <div class="work-tech-chips">
                 <span>Java</span>
                 <span>JavaFX</span>
                 <span>FXML</span>
-                <span>OOP</span>
+                <span>OOP Pillars</span>
                 <span>MVC</span>
                 <span>Maven</span>
               </div>
             </div>
           </div>
 
-          <!-- Project 2: Database Schema & Normalization Engine -->
-          <div class="project-card glass-panel">
-            <div class="project-thumb">
+          <!-- Work 2: Database Schema & 3NF Engine -->
+          <div class="work-card">
+            <div class="work-frame">
               <img src="assets/img/projects/database-erd.jpg" alt="Sistem Desain Skema Database & Normalisasi 3NF" loading="lazy">
-              <div class="project-category-badge">Database Architecture</div>
+              <div class="work-overlay"></div>
+              <span class="work-pill">DATABASE ENGINEERING</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Sistem Desain Skema Relasional & Normalisasi 3NF Terintegrasi</h3>
-              <p class="project-desc">
-                Perancangan basis data relasional end-to-end, mulai dari penerjemahan aturan bisnis ke ERD, normalisasi data (UNF ke 3NF), hingga optimasi query SQL berskala besar dengan indeks terstruktur.
+            <div class="work-info">
+              <h3 class="work-title">Sistem Desain Skema Relasional &amp; Normalisasi 3NF</h3>
+              <p class="work-desc">
+                Perancangan basis data relasional menyeluruh: mentranslasikan aturan bisnis nyata ke model konseptual ERD, mengeksekusi normalisasi data dari UNF ke 3NF guna integritas data, serta merancang strategi indexing untuk optimasi query SQL.
               </p>
-              <div class="project-features">
-                <span>✓ Redundansi Data 0% (Ternormalisasi 3NF)</span>
-                <span>✓ Multi-Table Joins & Filter Agregasi</span>
-                <span>✓ Indexing & Analisis Execution Plan</span>
+              <div class="work-attributes">
+                <span>✓ Redundansi 0% (Ternormalisasi 3NF)</span>
+                <span>✓ Multi-Table JOIN &amp; Nested Subqueries</span>
+                <span>✓ Analisis Eksekusi &amp; Index Tuning</span>
               </div>
-              <div class="project-tech">
+              <div class="work-tech-chips">
                 <span>SQL</span>
-                <span>MySQL / PostgreSQL</span>
-                <span>3NF</span>
                 <span>ERD</span>
-                <span>Performance Indexing</span>
+                <span>3NF</span>
+                <span>RDBMS</span>
+                <span>Indexing</span>
+                <span>Query Tuning</span>
               </div>
             </div>
           </div>
 
-          <!-- Project 3: IoT Telemetry & GIS Spatial Analytics -->
-          <div class="project-card glass-panel">
-            <div class="project-thumb">
+          <!-- Work 3: IoT Telemetry & GIS Spatial Analysis -->
+          <div class="work-card">
+            <div class="work-frame">
               <img src="assets/img/projects/iot-gis.jpg" alt="Prototipe Monitoring IoT & Analisis Spasial GIS" loading="lazy">
-              <div class="project-category-badge">IoT & Geospatial</div>
+              <div class="work-overlay"></div>
+              <span class="work-pill">IOT &amp; GEOSPATIAL</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Prototipe Telemetri IoT & Dashboard Analisis Spasial (GIS)</h3>
-              <p class="project-desc">
-                Sistem terpadu pembacaan telemetri sensor IoT dengan logika monitoring otomatis dan visualisasi analisis citra satelit serta kontur elevasi memanfaatkan perangkat lunak ArcGIS dan QGIS.
+            <div class="work-info">
+              <h3 class="work-title">Prototipe Telemetri IoT &amp; Analisis Citra Spasial (GIS)</h3>
+              <p class="work-desc">
+                Sistem terintegrasi pembacaan telemetri rangkaian sensor IoT dengan logika monitoring otomatis, dipadukan dengan pemrosesan spasial digital dan analisis citra satelit memanfaatkan perangkat lunak ArcGIS dan QGIS.
               </p>
-              <div class="project-features">
+              <div class="work-attributes">
                 <span>✓ Telemetri Sensor Real-Time</span>
-                <span>✓ Digitalisasi Data Spasial & Kontur</span>
-                <span>✓ Analisis Heatmap Citra Satelit</span>
+                <span>✓ Digitalisasi Spasial &amp; Kontur</span>
+                <span>✓ Analisis Citra Satelit &amp; Heatmap</span>
               </div>
-              <div class="project-tech">
+              <div class="work-tech-chips">
                 <span>IoT Sensors</span>
                 <span>Python</span>
                 <span>ArcGIS</span>
                 <span>QGIS</span>
-                <span>Spatial Data</span>
+                <span>Spatial Modeling</span>
               </div>
             </div>
           </div>
@@ -791,110 +760,103 @@
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="kontak" class="section-padding">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Terhubung & Berkolaborasi</span>
-          <h2 class="section-title">Hubungi Saya</h2>
-          <p class="section-subtitle">Siap mendiskusikan peluang magang, proyek rekayasa perangkat lunak, maupun kolaborasi akademik.</p>
-        </div>
+    <!-- SECTION 06: TRANSMISI & KONTAK -->
+    <section class="celestial-section bg-deep" id="kontak">
+      <div class="content-container">
+        <header class="section-badge-header">
+          <span class="numeral-tag">06 / TRANSMISI &amp; HUBUNGAN</span>
+          <h2 class="editorial-title">Hubungi Saya &amp; Mulai Kolaborasi</h2>
+          <p class="section-intro">Terbuka untuk diskusi proyek rekayasa perangkat lunak, peluang magang, maupun kerja sama akademik.</p>
+          <div class="editorial-line"></div>
+        </header>
 
-        <div class="contact-grid">
-          <!-- Contact Channels Info -->
-          <div class="contact-info-panel glass-panel">
-            <h3>Informasi Kontak Langsung</h3>
-            <p>Silakan hubungi saya melalui jalur komunikasi berikut untuk respons cepat:</p>
+        <div class="transmission-layout">
+          <!-- Left: Contact Details -->
+          <div class="transmission-info">
+            <h3 class="transmission-heading">Saluran Transmisi Langsung</h3>
+            <p class="transmission-sub">Pilih jalur komunikasi yang paling nyaman bagi Anda untuk memulai pembicaraan:</p>
 
-            <div class="contact-card-list">
-              <!-- Email -->
-              <div class="contact-item">
-                <div class="contact-icon icon-blue">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <div class="channel-list">
+              <!-- Channel: Email -->
+              <div class="channel-card">
+                <div class="channel-left">
+                  <span class="channel-kicker">SURAT ELEKTRONIK</span>
+                  <a href="mailto:revanarnanta@gmail.com" class="channel-link" id="email-text">revanarnanta@gmail.com</a>
                 </div>
-                <div class="contact-details">
-                  <span class="contact-type">Email Resmi</span>
-                  <a href="mailto:revanarnanta@gmail.com" class="contact-value" id="val-email">revanarnanta@gmail.com</a>
-                </div>
-                <button class="btn-copy-icon" data-copy="revanarnanta@gmail.com" title="Salin Email">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="btn-copy-celestial" data-copy="revanarnanta@gmail.com" title="Salin Alamat Email">
+                  <span class="copy-label">SALIN</span>
                 </button>
               </div>
 
-              <!-- Phone / WhatsApp -->
-              <div class="contact-item">
-                <div class="contact-icon icon-emerald">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <!-- Channel: WhatsApp -->
+              <div class="channel-card">
+                <div class="channel-left">
+                  <span class="channel-kicker">WHATSAPP &amp; TELEPON</span>
+                  <a href="https://wa.me/6282297078296" target="_blank" rel="noopener" class="channel-link" id="phone-text">082297078296</a>
                 </div>
-                <div class="contact-details">
-                  <span class="contact-type">WhatsApp / Telepon</span>
-                  <a href="https://wa.me/6282297078296" target="_blank" rel="noopener" class="contact-value" id="val-phone">082297078296</a>
-                </div>
-                <button class="btn-copy-icon" data-copy="082297078296" title="Salin Nomor HP">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button class="btn-copy-celestial" data-copy="082297078296" title="Salin Nomor WhatsApp">
+                  <span class="copy-label">SALIN</span>
                 </button>
               </div>
 
-              <!-- GitHub -->
-              <div class="contact-item">
-                <div class="contact-icon icon-purple">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <!-- Channel: GitHub -->
+              <div class="channel-card">
+                <div class="channel-left">
+                  <span class="channel-kicker">REPOSITORI KODE</span>
+                  <a href="https://github.com/alifianrevan" target="_blank" rel="noopener noreferrer" class="channel-link">github.com/alifianrevan</a>
                 </div>
-                <div class="contact-details">
-                  <span class="contact-type">GitHub Profile</span>
-                  <a href="https://github.com/alifianrevan" target="_blank" rel="noopener noreferrer" class="contact-value">github.com/alifianrevan</a>
-                </div>
+                <a href="https://github.com/alifianrevan" target="_blank" rel="noopener" class="btn-copy-celestial">
+                  <span class="copy-label">BUKA</span>
+                </a>
               </div>
 
-              <!-- Location -->
-              <div class="contact-item">
-                <div class="contact-icon icon-cyan">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <!-- Channel: Location -->
+              <div class="channel-card">
+                <div class="channel-left">
+                  <span class="channel-kicker">TITIK LOKASI</span>
+                  <span class="channel-static">Sawangan, Kota Depok, Jawa Barat</span>
                 </div>
-                <div class="contact-details">
-                  <span class="contact-type">Lokasi / Domisili</span>
-                  <span class="contact-value-static">Sawangan, Kota Depok, Jawa Barat</span>
-                </div>
+                <span class="channel-geo">IDN</span>
               </div>
             </div>
 
-            <div class="direct-action-buttons">
-              <a href="https://wa.me/6282297078296?text=Halo%20Alifian,%20saya%20melihat%20portofolio%20website%20Anda%20dan%20tertarik%20untuk%20berdiskusi." target="_blank" rel="noopener" class="btn btn-emerald btn-block">
-                <span>Kirim Pesan WhatsApp</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <div class="transmission-cta">
+              <a href="https://wa.me/6282297078296?text=Halo%20Alifian,%20saya%20tertarik%20dengan%20portofolio%20website%20Anda%20dan%20ingin%20berdiskusi." target="_blank" rel="noopener" class="btn-celestial-full">
+                <span>Kirim Transmisi via WhatsApp</span>
+                <span class="btn-arrow">→</span>
               </a>
             </div>
           </div>
 
-          <!-- Contact Form -->
-          <div class="contact-form-panel glass-panel">
-            <h3>Kirim Pesan Langsung</h3>
-            <p>Kirimkan pertanyaan atau tawaran kerja sama melalui formulir interaktif berikut:</p>
-            
-            <form id="contact-form" class="styled-form">
-              <div class="form-group">
-                <label for="form-name">Nama Lengkap</label>
-                <input type="text" id="form-name" name="name" placeholder="Misal: Budi Santoso" required>
+          <!-- Right: Direct Message Form -->
+          <div class="transmission-form-wrap">
+            <h3 class="transmission-heading">Kirimkan Pesan Tertulis</h3>
+            <p class="transmission-sub">Pesan Anda akan langsung terkirim ke kotak masuk email saya:</p>
+
+            <form id="contact-form" class="celestial-form">
+              <div class="form-row">
+                <label for="form-name">NAMA LENGKAP</label>
+                <input type="text" id="form-name" name="name" placeholder="Misal: Dimas Pratama" required>
               </div>
 
-              <div class="form-group">
-                <label for="form-email">Alamat Email</label>
-                <input type="email" id="form-email" name="email" placeholder="nama@perusahaan.com" required>
+              <div class="form-row">
+                <label for="form-email">ALAMAT EMAIL</label>
+                <input type="email" id="form-email" name="email" placeholder="nama@instansi.com" required>
               </div>
 
-              <div class="form-group">
-                <label for="form-subject">Subjek Pesan</label>
-                <input type="text" id="form-subject" name="subject" placeholder="Peluang Kerja / Proyek Kolaborasi" required>
+              <div class="form-row">
+                <label for="form-subject">SUBJEK DISKUSI</label>
+                <input type="text" id="form-subject" name="subject" placeholder="Peluang Magang / Kolaborasi Perangkat Lunak" required>
               </div>
 
-              <div class="form-group">
-                <label for="form-message">Pesan Anda</label>
-                <textarea id="form-message" name="message" rows="5" placeholder="Tuliskan rincian pesan atau tawaran kerja sama di sini..." required></textarea>
+              <div class="form-row">
+                <label for="form-message">ISI PESAN</label>
+                <textarea id="form-message" name="message" rows="5" placeholder="Tuliskan gagasan atau tawaran kerja sama di sini..." required></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-block" id="btn-submit-form">
-                <span>Kirimkan Pesan</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              <button type="submit" class="btn-celestial-submit" id="btn-submit">
+                <span>Kirimkan Pesan Sekarang</span>
+                <span class="btn-arrow">→</span>
               </button>
             </form>
           </div>
@@ -903,65 +865,65 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer-wrapper">
-    <div class="container footer-content">
-      <div class="footer-left">
-        <a href="#beranda" class="footer-logo">
-          <span class="brand-badge">AR</span>
-          <span>Alifian Revan Arnanta</span>
-        </a>
-        <p>Calon Sarjana Teknik Informatika • Universitas Pancasila</p>
+  <!-- CELESTIAL FOOTER -->
+  <footer class="celestial-footer">
+    <div class="content-container footer-flex">
+      <div class="footer-left-col">
+        <span class="footer-brand">ALIFIAN REVAN ARNANTA</span>
+        <p class="footer-tagline">Menjelajahi samudra komputasi, algoritma, dan rekayasa perangkat lunak.</p>
       </div>
-      <div class="footer-center">
-        <p>&copy; 2026 Alifian Revan Arnanta. Portofolio resmi.</p>
-        <p class="footer-subtext">Dibuat dengan standar modern web & siap dipublikasikan ke GitHub Pages.</p>
+
+      <div class="footer-center-col">
+        <p>&copy; 2026 Alifian Revan Arnanta. Seluruh hak cipta dilindungi.</p>
+        <p class="footer-subtext">Didesain dengan pendekatan celestial aesthetic &amp; terintegrasi di GitHub.</p>
       </div>
-      <div class="footer-right">
-        <button id="btn-scroll-top" class="btn-scroll-top" aria-label="Kembali ke atas">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+
+      <div class="footer-right-col">
+        <button class="btn-back-top" id="btn-back-top" aria-label="Kembali ke Puncak">
+          <span>PUNCAK</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
         </button>
       </div>
     </div>
   </footer>
 
-  <!-- MODAL CV ATS VIEWER (Bahasa Indonesia) -->
-  <div class="modal-backdrop" id="cv-modal">
-    <div class="modal-container glass-panel">
-      <div class="modal-header">
-        <div class="modal-title-wrap">
-          <span class="modal-kicker">Format CV Standar ATS</span>
+  <!-- ATS CV PREVIEW MODAL -->
+  <div class="modal-celestial-backdrop" id="cv-modal">
+    <div class="modal-celestial-box">
+      <div class="modal-top-bar">
+        <div class="modal-meta">
+          <span class="modal-badge">STANDAR ATS INTERNASIONAL</span>
           <h3>Kurikulum Vitae (CV) — Alifian Revan Arnanta</h3>
         </div>
-        <div class="modal-actions">
-          <button class="btn btn-outline btn-sm" id="btn-print-cv">
+        <div class="modal-button-group">
+          <button class="btn-print" id="btn-print-cv">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-            <span>Cetak / Simpan PDF</span>
+            <span>Cetak / PDF</span>
           </button>
-          <button class="modal-close-btn" id="modal-close" aria-label="Tutup jendela">✕</button>
+          <button class="btn-close-modal" id="btn-close-modal" aria-label="Tutup">✕</button>
         </div>
       </div>
 
-      <div class="modal-body" id="printable-cv">
-        <!-- ATS CV CONTENT (Terjemahan Bahasa Indonesia) -->
-        <div class="cv-ats-document">
-          <header class="cv-header">
-            <h1 class="cv-name">ALIFIAN REVAN ARNANTA</h1>
-            <p class="cv-contact-line">
+      <div class="modal-scroll-body" id="printable-cv">
+        <!-- ATS CLEAN PAPER DOCUMENT -->
+        <article class="ats-paper">
+          <header class="ats-header">
+            <h1 class="ats-name">ALIFIAN REVAN ARNANTA</h1>
+            <p class="ats-contact">
               Jl. Alam Damai no.133, No.22 Rt 3 RW 1 Bedahan, Kec. Sawangan, Kota Depok, Jawa Barat | 082297078296 | revanarnanta@gmail.com | github.com/alifianrevan
             </p>
           </header>
 
-          <section class="cv-section">
-            <h2 class="cv-section-title">RINGKASAN PROFESIONAL (SUMMARY)</h2>
-            <p class="cv-text">
+          <section class="ats-block">
+            <h2 class="ats-heading">RINGKASAN PROFESIONAL (SUMMARY)</h2>
+            <p class="ats-paragraph">
               Mahasiswa tingkat akhir Teknik Informatika di Universitas Pancasila yang berorientasi pada hasil dengan pengalaman 1,5 tahun sebagai Asisten Laboratorium Komputer, membimbing mahasiswa dalam pemrograman dan konsep inti komputasi. Memiliki kompetensi mumpuni dalam Rekayasa Perangkat Lunak (Software Engineering), Pengembangan Web Full-Stack, dan Sains Data (Data Science), dengan keahlian praktis membangun aplikasi modular menggunakan Java (JavaFX, OOP), JavaScript, HTML5/CSS3, dan Python. Mahir dalam Normalisasi Basis Data Relasional (hingga 3NF) dengan SQL, pemodelan prediktif melalui Machine Learning, serta implementasi multidisiplin pada IoT dan GIS (ArcGIS/QGIS). Memadukan kemampuan komunikasi teknis yang lugas, alur kerja kolaboratif berbasis Git, dan pemecahan masalah analitis untuk menghasilkan solusi perangkat lunak yang scalable dan andal.
             </p>
           </section>
 
-          <section class="cv-section">
-            <h2 class="cv-section-title">KEAHLIAN UTAMA (SKILLS)</h2>
-            <div class="cv-skills-grid">
+          <section class="ats-block">
+            <h2 class="ats-heading">KEAHLIAN UTAMA (SKILLS)</h2>
+            <div class="ats-skills-columns">
               <div>• Penguasaan Penuh HTML5 &amp; CSS3</div>
               <div>• Framework C# dan .NET</div>
               <div>• Pemrograman Python (Scripting &amp; ML)</div>
@@ -979,19 +941,16 @@
             </div>
           </section>
 
-          <section class="cv-section">
-            <h2 class="cv-section-title">PENGALAMAN KERJA &amp; ASISTENSI (EXPERIENCE)</h2>
+          <section class="ats-block">
+            <h2 class="ats-heading">PENGALAMAN KERJA &amp; ASISTENSI (EXPERIENCE)</h2>
 
-            <!-- Exp 1 -->
-            <div class="cv-job">
-              <div class="cv-job-header">
-                <div>
-                  <strong>Asisten Dosen Laboratorium — Pemrograman Berorientasi Objek &amp; Java</strong><br>
-                  <em>Universitas Pancasila, Jakarta Selatan, DKI Jakarta</em>
-                </div>
-                <div class="cv-job-date">Sep 2026 – Sekarang</div>
+            <div class="ats-entry">
+              <div class="ats-entry-top">
+                <strong>Asisten Dosen Laboratorium — Pemrograman Berorientasi Objek &amp; Java</strong>
+                <span>Sep 2026 – Sekarang</span>
               </div>
-              <ul class="cv-bullet-list">
+              <div class="ats-entry-sub">Universitas Pancasila, Jakarta Selatan, DKI Jakarta</div>
+              <ul class="ats-list">
                 <li><strong>Instruksi &amp; Mentorship:</strong> Memfasilitasi sesi praktikum laboratorium mingguan untuk mahasiswa S1, memberikan bimbingan mengenai fundamental komputasi inti, pemikiran algoritmik, dan praktik pengembangan perangkat lunak modern.</li>
                 <li><strong>Fondasi Inti OOP:</strong> Membimbing mahasiswa dalam menguasai 4 pilar utama OOP meliputi Enkapsulasi, Pewarisan (Inheritance), Polimorfisme, dan Abstraksi Data melalui implementasi latihan coding langsung.</li>
                 <li><strong>Struktur Kode Modular &amp; Reusabilitas:</strong> Mengajarkan implementasi Interface, Abstract Class, serta Method Overriding/Overloading untuk membangun arsitektur aplikasi yang bersih, terawat, dan reusable.</li>
@@ -1000,16 +959,13 @@
               </ul>
             </div>
 
-            <!-- Exp 2 -->
-            <div class="cv-job">
-              <div class="cv-job-header">
-                <div>
-                  <strong>Asisten Dosen Laboratorium — Sistem Basis Data Relasional</strong><br>
-                  <em>Universitas Pancasila, Jakarta Selatan, DKI Jakarta</em>
-                </div>
-                <div class="cv-job-date">Sep 2026 – Sekarang</div>
+            <div class="ats-entry">
+              <div class="ats-entry-top">
+                <strong>Asisten Dosen Laboratorium — Sistem Basis Data Relasional</strong>
+                <span>Sep 2026 – Sekarang</span>
               </div>
-              <ul class="cv-bullet-list">
+              <div class="ats-entry-sub">Universitas Pancasila, Jakarta Selatan, DKI Jakarta</div>
+              <ul class="ats-list">
                 <li><strong>Instruksi Praktikum &amp; Mentoring:</strong> Memimpin sesi laboratorium untuk mahasiswa S1, mengajarkan konsep basis data relasional fundamental hingga tingkat menengah, pemodelan data, dan eksekusi query praktis.</li>
                 <li><strong>Desain Skema Relasional &amp; Normalisasi:</strong> Membimbing perancangan skema database dari kebutuhan bisnis nyata ke Entity-Relationship Diagram (ERD), serta melakukan normalisasi bertahap dari UNF hingga 3NF untuk mengeliminasi redundansi data dan menjaga integritas relasional.</li>
                 <li><strong>Penguasaan SQL (DDL, DML, DCL):</strong> Mengajarkan pembuatan, modifikasi, dan pengelolaan skema relasional dengan Data Definition Language (DDL), serta latihan Data Manipulation Language (DML) untuk filtering data kompleks, grouping, dan fungsi agregasi (GROUP BY, HAVING).</li>
@@ -1019,16 +975,13 @@
               </ul>
             </div>
 
-            <!-- Exp 3 -->
-            <div class="cv-job">
-              <div class="cv-job-header">
-                <div>
-                  <strong>Asisten Dosen Laboratorium — Struktur Data &amp; Algoritma</strong><br>
-                  <em>Universitas Pancasila, Jakarta Selatan, DKI Jakarta</em>
-                </div>
-                <div class="cv-job-date">Sep 2025 – Feb 2026</div>
+            <div class="ats-entry">
+              <div class="ats-entry-top">
+                <strong>Asisten Dosen Laboratorium — Struktur Data &amp; Algoritma</strong>
+                <span>Sep 2025 – Feb 2026</span>
               </div>
-              <ul class="cv-bullet-list">
+              <div class="ats-entry-sub">Universitas Pancasila, Jakarta Selatan, DKI Jakarta</div>
+              <ul class="ats-list">
                 <li><strong>Instruksi Lab &amp; Pemecahan Masalah:</strong> Memfasilitasi sesi praktikum langsung, membimbing mahasiswa dalam implementasi tipe data abstrak (ADT), alokasi manajemen memori, dan teknik pemecahan masalah komputasi.</li>
                 <li><strong>Struktur Data Linear:</strong> Mengajarkan implementasi dan manipulasi struktur linear bertahap mencakup Array, Dynamic Array, Singly &amp; Doubly Linked Lists, Stacks (LIFO), dan Queues (FIFO, circular, priority queue).</li>
                 <li><strong>Struktur Data Non-Linear:</strong> Membimbing model hierarkis dan jaringan, mendemonstrasikan implementasi simpul pada Binary Tree, Binary Search Tree (BST), penelusuran pohon (In-order, Pre-order, Post-order), serta representasi Graf (Adjacency Matrix &amp; List).</li>
@@ -1037,16 +990,13 @@
               </ul>
             </div>
 
-            <!-- Exp 4 -->
-            <div class="cv-job">
-              <div class="cv-job-header">
-                <div>
-                  <strong>Operator Digital Printing</strong><br>
-                  <em>Proxy Media Digital Printing, Depok, Jawa Barat</em>
-                </div>
-                <div class="cv-job-date">Nov 2022 – Apr 2023</div>
+            <div class="ats-entry">
+              <div class="ats-entry-top">
+                <strong>Operator Digital Printing</strong>
+                <span>Nov 2022 – Apr 2023</span>
               </div>
-              <ul class="cv-bullet-list">
+              <div class="ats-entry-sub">Proxy Media Digital Printing, Depok, Jawa Barat</div>
+              <ul class="ats-list">
                 <li>Mengevaluasi kualitas bahan baku, komponen, dan produk akhir, menyingkirkan produk yang tidak memenuhi spesifikasi untuk menjaga standar mutu tinggi.</li>
                 <li>Menyiapkan, mengalibrasi, dan mengoperasikan mesin cetak presisi sebelum memulai siklus produksi.</li>
                 <li>Secara konsisten mencapai target produksi harian sesuai deadline dengan standar mutu yang prima.</li>
@@ -1055,17 +1005,15 @@
             </div>
           </section>
 
-          <section class="cv-section">
-            <h2 class="cv-section-title">PENDIDIKAN FORMAL (EDUCATION)</h2>
-            <div class="cv-job">
-              <div class="cv-job-header">
-                <div>
-                  <strong>Sarjana (S1) Teknik Informatika (Informatics Engineering)</strong><br>
-                  <em>Universitas Pancasila, Jakarta Selatan | IPK: 3.60 / 4.00</em>
-                </div>
-                <div class="cv-job-date">Sep 2024 – Sekarang</div>
+          <section class="ats-block">
+            <h2 class="ats-heading">PENDIDIKAN FORMAL (EDUCATION)</h2>
+            <div class="ats-entry">
+              <div class="ats-entry-top">
+                <strong>Sarjana (S1) Teknik Informatika (Informatics Engineering)</strong>
+                <span>Sep 2024 – Sekarang</span>
               </div>
-              <ul class="cv-bullet-list">
+              <div class="ats-entry-sub">Universitas Pancasila, Jakarta Selatan | IPK: 3.60 / 4.00</div>
+              <ul class="ats-list">
                 <li><strong>Fokus Akademik Inti:</strong> Menempuh perkuliahan sarjana dengan spesialisasi pada Software Engineering, Full-Stack Web Development, Sains Data, Machine Learning, dan Sistem Basis Data.</li>
                 <li><strong>Pengembangan Perangkat Lunak &amp; OOP:</strong> Merancang aplikasi desktop dengan Java dan JavaFX menggunakan Maven, menerapkan paradigma OOP (Enkapsulasi, Pewarisan, Polimorfisme).</li>
                 <li><strong>Web Engineering &amp; Version Control:</strong> Membangun antarmuka web interaktif dan responsif menggunakan HTML5, CSS3, dan JavaScript (DOM manipulation &amp; dynamic event handling) dengan Git &amp; GitHub untuk kolaborasi.</li>
@@ -1074,15 +1022,15 @@
               </ul>
             </div>
           </section>
-        </div>
+        </article>
       </div>
     </div>
   </div>
 
-  <!-- Toast Notification Container -->
-  <div class="toast" id="toast"></div>
+  <!-- Toast Notification -->
+  <div class="celestial-toast" id="toast"></div>
 
-  <!-- Script -->
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>

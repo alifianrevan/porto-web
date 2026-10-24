@@ -1,285 +1,376 @@
 /**
- * ALIFIAN REVAN ARNANTA - PORTFOLIO INTERACTION ENGINE
- * Interactive scripts for navigation, animations, filtering, modals, and clipboard.
+ * ALIFIAN REVAN ARNANTA — CELESTIAL CANVAS & INTERACTION ENGINE
+ * Handcrafted starry cosmos, interactive constellations, shooting stars, and smooth navigation.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. TYPEWRITER EFFECT
-  const roles = [
-    "Asisten Laboratorium Komputer",
-    "Mahasiswa Teknik Informatika",
-    "Software Engineering Enthusiast",
-    "Full-Stack Web Developer",
-    "Spesialis Normalisasi Basis Data (3NF)",
-    "Praktisi IoT & Analisis Spasial GIS"
-  ];
-  
-  const typewriterElem = document.getElementById('typewriter-text');
-  let roleIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let typeSpeed = 90;
 
-  function typeEffect() {
-    if (!typewriterElem) return;
-    const currentRole = roles[roleIndex];
-    
-    if (isDeleting) {
-      typewriterElem.textContent = currentRole.substring(0, charIndex - 1);
-      charIndex--;
-      typeSpeed = 40;
-    } else {
-      typewriterElem.textContent = currentRole.substring(0, charIndex + 1);
-      charIndex++;
-      typeSpeed = 90;
+  // ==========================================================================
+  // 1. CELESTIAL STARFIELD & CONSTELLATION CANVAS
+  // ==========================================================================
+  const canvas = document.getElementById('celestial-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      initStars();
+    });
+
+    const starCount = Math.floor((width * height) / 8000); // Responsive density
+    const stars = [];
+    const mouse = { x: -1000, y: -1000, targetX: 0, targetY: 0 };
+    let shootingStar = null;
+
+    // Track mouse for interactive constellation and parallax
+    window.addEventListener('mousemove', (e) => {
+      mouse.targetX = (e.clientX - width / 2) * 0.05;
+      mouse.targetY = (e.clientY - height / 2) * 0.05;
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    window.addEventListener('mouseleave', () => {
+      mouse.x = -1000;
+      mouse.y = -1000;
+    });
+
+    class Star {
+      constructor() {
+        this.reset();
+      }
+
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.size = Math.random() * 1.6 + 0.4;
+        this.baseAlpha = Math.random() * 0.7 + 0.2;
+        this.alpha = this.baseAlpha;
+        this.twinkleSpeed = Math.random() * 0.02 + 0.005;
+        this.twinkleFactor = Math.random() * Math.PI * 2;
+        this.parallaxSpeed = this.size * 0.35;
+      }
+
+      update() {
+        this.twinkleFactor += this.twinkleSpeed;
+        this.alpha = this.baseAlpha + Math.sin(this.twinkleFactor) * 0.25;
+        if (this.alpha < 0.1) this.alpha = 0.1;
+        if (this.alpha > 0.95) this.alpha = 0.95;
+      }
+
+      draw(offsetX, offsetY) {
+        ctx.beginPath();
+        ctx.arc(
+          this.x + offsetX * this.parallaxSpeed,
+          this.y + offsetY * this.parallaxSpeed,
+          this.size,
+          0,
+          Math.PI * 2
+        );
+        ctx.fillStyle = `rgba(226, 232, 240, ${this.alpha})`;
+        ctx.fill();
+      }
     }
 
-    if (!isDeleting && charIndex === currentRole.length) {
-      // Pause at end of text
-      isDeleting = true;
-      typeSpeed = 1800;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-      typeSpeed = 400;
+    class ShootingStar {
+      constructor() {
+        this.reset();
+      }
+
+      reset() {
+        this.x = Math.random() * (width * 0.8);
+        this.y = Math.random() * (height * 0.4);
+        this.length = Math.random() * 70 + 40;
+        this.speed = Math.random() * 10 + 12;
+        this.angle = Math.PI / 4 + (Math.random() - 0.5) * 0.2; // approx 45 degrees
+        this.opacity = 1;
+        this.active = true;
+      }
+
+      update() {
+        this.x += Math.cos(this.angle) * this.speed;
+        this.y += Math.sin(this.angle) * this.speed;
+        this.opacity -= 0.02;
+        if (this.opacity <= 0 || this.x > width || this.y > height) {
+          this.active = false;
+        }
+      }
+
+      draw() {
+        if (!this.active) return;
+        const tailX = this.x - Math.cos(this.angle) * this.length;
+        const tailY = this.y - Math.sin(this.angle) * this.length;
+
+        const grad = ctx.createLinearGradient(this.x, this.y, tailX, tailY);
+        grad.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
+        grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+        ctx.beginPath();
+        ctx.moveTo(this.x, this.y);
+        ctx.lineTo(tailX, tailY);
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = 1.6;
+        ctx.stroke();
+      }
     }
 
-    setTimeout(typeEffect, typeSpeed);
+    function initStars() {
+      stars.length = 0;
+      for (let i = 0; i < starCount; i++) {
+        stars.push(new Star());
+      }
+    }
+    initStars();
+
+    let currentOffsetX = 0;
+    let currentOffsetY = 0;
+    let meteorTimer = 0;
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      // Smooth parallax interpolation
+      currentOffsetX += (mouse.targetX - currentOffsetX) * 0.05;
+      currentOffsetY += (mouse.targetY - currentOffsetY) * 0.05;
+
+      // Update and draw stars
+      for (let i = 0; i < stars.length; i++) {
+        const star = stars[i];
+        star.update();
+        star.draw(currentOffsetX, currentOffsetY);
+
+        // Constellation lines towards mouse
+        const starRenderX = star.x + currentOffsetX * star.parallaxSpeed;
+        const starRenderY = star.y + currentOffsetY * star.parallaxSpeed;
+        const dist = Math.hypot(mouse.x - starRenderX, mouse.y - starRenderY);
+
+        if (dist < 110) {
+          ctx.beginPath();
+          ctx.moveTo(starRenderX, starRenderY);
+          ctx.lineTo(mouse.x, mouse.y);
+          const lineAlpha = (1 - dist / 110) * 0.35;
+          ctx.strokeStyle = `rgba(226, 232, 240, ${lineAlpha})`;
+          ctx.lineWidth = 0.75;
+          ctx.stroke();
+        }
+      }
+
+      // Spontaneous shooting stars
+      meteorTimer++;
+      if (meteorTimer > 280 && Math.random() < 0.02 && (!shootingStar || !shootingStar.active)) {
+        shootingStar = new ShootingStar();
+        meteorTimer = 0;
+      }
+
+      if (shootingStar && shootingStar.active) {
+        shootingStar.update();
+        shootingStar.draw();
+      }
+
+      requestAnimationFrame(animate);
+    }
+    animate();
   }
-  typeEffect();
 
+  // ==========================================================================
   // 2. EXPERIENCE TIMELINE FILTERING
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const timelineItems = document.querySelectorAll('.timeline-item');
+  // ==========================================================================
+  const filterLinks = document.querySelectorAll('.filter-link');
+  const timelineNodes = document.querySelectorAll('.timeline-node');
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  filterLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      filterLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
 
-      const filterValue = btn.getAttribute('data-filter');
+      const filter = link.getAttribute('data-filter');
 
-      timelineItems.forEach(item => {
-        const itemCategory = item.getAttribute('data-category');
-        if (filterValue === 'all' || itemCategory === filterValue) {
-          item.classList.remove('hidden');
-          item.style.opacity = '0';
+      timelineNodes.forEach(node => {
+        const cat = node.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          node.classList.remove('hidden');
+          node.style.opacity = '0';
+          node.style.transform = 'translateY(10px)';
           setTimeout(() => {
-            item.style.opacity = '1';
-          }, 50);
+            node.style.opacity = '1';
+            node.style.transform = 'translateY(0)';
+          }, 40);
         } else {
-          item.classList.add('hidden');
+          node.classList.add('hidden');
         }
       });
     });
   });
 
-  // 3. NAVBAR SCROLLSPY & STICKY SHADOW
-  const navbar = document.querySelector('.navbar-wrapper');
-  const navLinks = document.querySelectorAll('.nav-link');
+  // ==========================================================================
+  // 3. HEADER SCROLL STATE & ACTIVE SCROLLSPY
+  // ==========================================================================
+  const header = document.getElementById('site-header');
+  const navItems = document.querySelectorAll('.nav-item');
   const sections = document.querySelectorAll('section[id]');
-  const btnScrollTop = document.getElementById('btn-scroll-top');
+  const btnBackTop = document.getElementById('btn-back-top');
 
   window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset;
 
-    // Header styling on scroll
-    if (scrollY > 50) {
-      navbar.style.background = 'rgba(7, 10, 19, 0.92)';
-      navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
-    } else {
-      navbar.style.background = 'rgba(7, 10, 19, 0.75)';
-      navbar.style.boxShadow = 'none';
-    }
-
-    // Scroll-to-top button visibility
-    if (btnScrollTop) {
-      if (scrollY > 400) {
-        btnScrollTop.style.opacity = '1';
-        btnScrollTop.style.visibility = 'visible';
+    if (header) {
+      if (scrollY > 60) {
+        header.classList.add('scrolled');
       } else {
-        btnScrollTop.style.opacity = '0';
-        btnScrollTop.style.visibility = 'hidden';
+        header.classList.remove('scrolled');
       }
     }
 
-    // Active Section ScrollSpy
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120;
-      const sectionId = current.getAttribute('id');
+    // ScrollSpy
+    sections.forEach(sec => {
+      const secHeight = sec.offsetHeight;
+      const secTop = sec.offsetTop - 150;
+      const secId = sec.getAttribute('id');
 
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
+      if (scrollY > secTop && scrollY <= secTop + secHeight) {
+        navItems.forEach(item => {
+          item.classList.remove('active');
+          if (item.getAttribute('href') === `#${secId}`) {
+            item.classList.add('active');
           }
         });
       }
     });
   });
 
-  // Scroll to top click
-  if (btnScrollTop) {
-    btnScrollTop.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+  if (btnBackTop) {
+    btnBackTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
-  // 4. MOBILE MENU TOGGLE
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
+  // ==========================================================================
+  // 4. MOBILE NAVIGATION DRAWER
+  // ==========================================================================
+  const navToggle = document.getElementById('nav-toggle');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+  const drawerClose = document.getElementById('drawer-close');
+  const drawerItems = document.querySelectorAll('.drawer-item');
 
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-      menuToggle.classList.toggle('active');
-    });
-
-    // Close when clicking nav link
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        menuToggle.classList.remove('active');
-      });
-    });
-
-    // Close when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-        navMenu.classList.remove('open');
-        menuToggle.classList.remove('active');
-      }
-    });
+  function openDrawer() {
+    if (mobileDrawer) mobileDrawer.classList.add('open');
   }
 
-  // 5. MODAL CV ATS VIEWER
-  const btnViewCv = document.getElementById('btn-view-cv');
+  function closeDrawer() {
+    if (mobileDrawer) mobileDrawer.classList.remove('open');
+  }
+
+  if (navToggle) navToggle.addEventListener('click', openDrawer);
+  if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+
+  drawerItems.forEach(item => {
+    item.addEventListener('click', closeDrawer);
+  });
+
+  // ==========================================================================
+  // 5. ATS CV PREVIEW MODAL
+  // ==========================================================================
+  const btnOpenCv = document.getElementById('btn-open-cv');
   const cvModal = document.getElementById('cv-modal');
-  const modalClose = document.getElementById('modal-close');
+  const btnCloseModal = document.getElementById('btn-close-modal');
   const btnPrintCv = document.getElementById('btn-print-cv');
 
-  function openCvModal() {
+  function showModal() {
     if (cvModal) {
       cvModal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
   }
 
-  function closeCvModal() {
+  function hideModal() {
     if (cvModal) {
       cvModal.classList.remove('active');
       document.body.style.overflow = '';
     }
   }
 
-  if (btnViewCv) btnViewCv.addEventListener('click', openCvModal);
-  if (modalClose) modalClose.addEventListener('click', closeCvModal);
+  if (btnOpenCv) btnOpenCv.addEventListener('click', showModal);
+  if (btnCloseModal) btnCloseModal.addEventListener('click', hideModal);
 
-  // Close on backdrop click
   if (cvModal) {
     cvModal.addEventListener('click', (e) => {
-      if (e.target === cvModal) {
-        closeCvModal();
-      }
+      if (e.target === cvModal) hideModal();
     });
   }
 
-  // Close on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && cvModal && cvModal.classList.contains('active')) {
-      closeCvModal();
+      hideModal();
     }
   });
 
-  // Print CV
   if (btnPrintCv) {
     btnPrintCv.addEventListener('click', () => {
       window.print();
     });
   }
 
-  // 6. CLIPBOARD COPY & TOAST NOTIFICATION
+  // ==========================================================================
+  // 6. CELESTIAL TOAST NOTIFICATION & CLIPBOARD COPY
+  // ==========================================================================
   const toast = document.getElementById('toast');
-  const copyButtons = document.querySelectorAll('.btn-copy-icon');
+  const copyButtons = document.querySelectorAll('.btn-copy-celestial');
 
-  function showToast(message) {
+  function triggerToast(text) {
     if (!toast) return;
-    toast.textContent = message;
+    toast.textContent = text;
     toast.classList.add('show');
     setTimeout(() => {
       toast.classList.remove('show');
     }, 3200);
   }
 
-  copyButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const textToCopy = button.getAttribute('data-copy');
-      if (textToCopy) {
-        navigator.clipboard.writeText(textToCopy).then(() => {
-          showToast(`✓ Berhasil disalin: ${textToCopy}`);
+  copyButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const copyVal = btn.getAttribute('data-copy');
+      if (copyVal) {
+        navigator.clipboard.writeText(copyVal).then(() => {
+          triggerToast(`✓ Tersalin ke clipboard: ${copyVal}`);
         }).catch(() => {
-          // Fallback
-          const tempInput = document.createElement('input');
-          tempInput.value = textToCopy;
-          document.body.appendChild(tempInput);
-          tempInput.select();
+          const temp = document.createElement('input');
+          temp.value = copyVal;
+          document.body.appendChild(temp);
+          temp.select();
           document.execCommand('copy');
-          document.body.removeChild(tempInput);
-          showToast(`✓ Berhasil disalin: ${textToCopy}`);
+          document.body.removeChild(temp);
+          triggerToast(`✓ Tersalin ke clipboard: ${copyVal}`);
         });
       }
     });
   });
 
-  // 7. CONTACT FORM SUBMISSION
+  // ==========================================================================
+  // 7. DIRECT TRANSMISSION FORM
+  // ==========================================================================
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
       const name = document.getElementById('form-name').value.trim();
       const email = document.getElementById('form-email').value.trim();
       const subject = document.getElementById('form-subject').value.trim();
       const message = document.getElementById('form-message').value.trim();
 
       if (!name || !email || !message) {
-        showToast('⚠️ Harap isi semua kolom wajib!');
+        triggerToast('Harap lengkapi semua kolom transmisi.');
         return;
       }
 
-      // Create mailto link as direct action
-      const mailtoUrl = `mailto:revanarnanta@gmail.com?subject=${encodeURIComponent(subject || 'Pesan dari Portofolio Web')}&body=${encodeURIComponent(`Nama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`)}`;
-      
-      showToast(`Terima kasih ${name}, membuka email Anda untuk mengirim pesan...`);
+      const mailto = `mailto:revanarnanta@gmail.com?subject=${encodeURIComponent(subject || 'Transmisi Portofolio')}&body=${encodeURIComponent(`Nama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`)}`;
+      triggerToast(`Terima kasih ${name}, menyiapkan email pengiriman...`);
       setTimeout(() => {
-        window.location.href = mailtoUrl;
-      }, 1000);
+        window.location.href = mailto;
+      }, 900);
 
       contactForm.reset();
-    });
-  }
-
-  // 8. 3D TILT EFFECT ON HERO AVATAR CARD
-  const heroTiltCard = document.getElementById('hero-tilt-card');
-  if (heroTiltCard && window.innerWidth > 992) {
-    heroTiltCard.addEventListener('mousemove', (e) => {
-      const rect = heroTiltCard.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      
-      const rotateX = (-y / rect.height) * 14;
-      const rotateY = (x / rect.width) * 14;
-      
-      heroTiltCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-    });
-
-    heroTiltCard.addEventListener('mouseleave', () => {
-      heroTiltCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
     });
   }
 });
