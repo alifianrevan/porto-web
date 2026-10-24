@@ -1,0 +1,12 @@
+{
+  "name": "porto-web",
+  "version": "1.0.0",
+  "description": "Portofolio Resmi Alifian Revan Arnanta",
+  "scripts": {
+    "start": "npx serve -l 3000 .",
+    "dev": "npx serve -l 3000 ."
+  },
+  "keywords": ["portfolio", "alifian-revan", "software-engineer"],
+  "author": "Alifian Revan Arnanta",
+  "license": "MIT"
+}
