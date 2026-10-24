@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Alifian Revan Arnanta — Portofolio Web">
   <meta property="og:description" content="Eksplorasi rekayasa perangkat lunak, asistensi laboratorium, basis data relasional, dan IoT oleh Alifian Revan Arnanta.">
-  <meta property="og:image" content="assets/img/avatar.jpg">
+  <meta property="og:image" content="assets/img/profile-alifian.jpg">
   
   <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,7 +66,7 @@
 
       <nav class="desktop-nav" id="desktop-nav">
         <ul class="nav-links">
-          <li><a href="#prolog" class="nav-item"><span>01</span> Prolog</a></li>
+          <li><a href="#profil" class="nav-item"><span>01</span> Profil</a></li>
           <li><a href="#pengalaman" class="nav-item"><span>02</span> Jejak Langkah</a></li>
           <li><a href="#pendidikan" class="nav-item"><span>03</span> Pendidikan</a></li>
           <li><a href="#keahlian" class="nav-item"><span>04</span> Keahlian</a></li>
@@ -100,7 +100,7 @@
     </div>
     <ul class="drawer-links">
       <li><a href="#hero" class="drawer-item">Beranda</a></li>
-      <li><a href="#prolog" class="drawer-item"><span>01</span> Prolog</a></li>
+      <li><a href="#profil" class="drawer-item"><span>01</span> Profil Pribadi</a></li>
       <li><a href="#pengalaman" class="drawer-item"><span>02</span> Jejak Langkah</a></li>
       <li><a href="#pendidikan" class="drawer-item"><span>03</span> Pendidikan</a></li>
       <li><a href="#keahlian" class="drawer-item"><span>04</span> Keahlian</a></li>
@@ -197,7 +197,7 @@
 
         <!-- Minimalist Actions -->
         <div class="hero-cta-group">
-          <a href="#prolog" class="cta-link-clean">
+          <a href="#profil" class="cta-link-clean">
             <span>Eksplorasi Profil</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </a>
@@ -210,7 +210,7 @@
 
         <!-- Scroll Indicator -->
         <div class="scroll-cue-wrap">
-          <a href="#prolog" class="scroll-cue" aria-label="Gulir ke bawah">
+          <a href="#profil" class="scroll-cue" aria-label="Gulir ke profil">
             <span class="chevron-down"></span>
             <span class="cue-dot"></span>
           </a>
@@ -257,79 +257,179 @@
       </div>
     </section>
 
-    <!-- SECTION 01: PROLOG (TENTANG SAYA) -->
-    <section class="celestial-section" id="prolog">
+    <!-- SECTION 01: HALAMAN & BAGIAN PROFIL PENGEMBANG -->
+    <section class="celestial-section" id="profil">
+      <div id="prolog"></div><!-- Anchor alias untuk kompatibilitas tautan lama -->
       <div class="content-container">
         <header class="section-badge-header">
-          <span class="numeral-tag">01 / PROLOG</span>
-          <h2 class="editorial-title">Tentang Diri &amp; Filosofi Komputasi</h2>
+          <span class="numeral-tag">01 / PROFIL PRIBADI</span>
+          <h2 class="editorial-title">Profil Pengembang &amp; Filosofi Komputasi</h2>
+          <p class="section-intro">Mengenal lebih dekat Alifian Revan Arnanta — dedikasi akademik, etos riset, dan visi rekayasa perangkat lunak modern.</p>
           <div class="editorial-line"></div>
         </header>
 
-        <div class="prolog-layout">
-          <!-- Left: Narrative -->
-          <div class="prolog-narrative">
-            <p class="lead-text">
-              Saya adalah mahasiswa tingkat akhir <strong>Teknik Informatika di Universitas Pancasila</strong> yang mendedikasikan <strong>1,5 tahun pengalaman sebagai Asisten Laboratorium Praktikum</strong>, mendampingi dan mengarahkan mahasiswa dalam memahami logika komputasi mendalam serta rekayasa perangkat lunak modern.
-            </p>
-            <p>
-              Fokus keahlian saya berakar pada <strong>Software Engineering, Full-Stack Web Development, dan Sains Data</strong>, dengan keahlian teknis membangun aplikasi desktop modular menggunakan <strong>Java (JavaFX, OOP, Maven)</strong>, antarmuka web responsif dengan <strong>HTML5/CSS3 dan JavaScript</strong>, serta skrip analitis berbasis <strong>Python</strong>.
-            </p>
-            <p>
-              Dalam ranah manajemen data, saya mahir dalam <strong>Normalisasi Basis Data Relasional hingga 3NF</strong> menggunakan SQL, konstruksi query bertingkat, serta optimasi indeks. Keahlian ini disempurnakan dengan eksplorasi multidisiplin pada rancang bangun <strong>Internet of Things (IoT)</strong> dan analisis spasial citra satelit melalui <strong>ArcGIS &amp; QGIS</strong>.
-            </p>
+        <div class="profile-page-grid">
+          <!-- CARD KHUSUS FOTO PROFILE (PROFILE SPOTLIGHT CARD) -->
+          <aside class="profile-card-column">
+            <div class="profile-spotlight-card">
+              <!-- Corner Astro Accents -->
+              <span class="card-corner corner-tl">✦</span>
+              <span class="card-corner corner-tr">✦</span>
+              <span class="card-corner corner-bl">✦</span>
+              <span class="card-corner corner-br">✦</span>
 
-            <div class="celestial-meta-grid">
-              <div class="meta-item">
-                <span class="meta-label">KOORDINAT DOMISILI</span>
-                <span class="meta-value">Sawangan, Kota Depok, Jawa Barat</span>
+              <!-- Photo Frame Container -->
+              <div class="profile-photo-frame" title="Foto Resmi Alifian Revan Arnanta (Klik untuk memperbesar)">
+                <img 
+                  src="assets/img/profile-alifian.jpg" 
+                  alt="Foto Resmi Alifian Revan Arnanta" 
+                  class="profile-photo-img"
+                  id="profile-photo-img"
+                  loading="lazy"
+                >
+                <div class="photo-overlay-gradient"></div>
+
+                <!-- Live Status Pill -->
+                <div class="photo-floating-status">
+                  <span class="status-pulse-dot"></span>
+                  <span>Terbuka untuk Rekayasa &amp; Magang</span>
+                </div>
+
+                <!-- Quick Location Badge -->
+                <div class="photo-floating-badge">
+                  <span>📍 Depok / Jakarta</span>
+                </div>
               </div>
-              <div class="meta-item">
-                <span class="meta-label">AFILIASI AKADEMIK</span>
-                <span class="meta-value">Universitas Pancasila, Jakarta Selatan</span>
-              </div>
-              <div class="meta-item">
-                <span class="meta-label">IPK AKADEMIK</span>
-                <span class="meta-value">3.60 / 4.00</span>
-              </div>
-              <div class="meta-item">
-                <span class="meta-label">STATUS KETERSEDIAAN</span>
-                <span class="meta-value status-available">● Terbuka untuk Magang &amp; Rekayasa</span>
+
+              <!-- Identity Details Inside Card -->
+              <div class="profile-identity-block">
+                <span class="identity-tag">KANDIDAT SARJANA INFORMATIKA</span>
+                <h3 class="identity-name">Alifian Revan Arnanta</h3>
+                <p class="identity-role">Software Engineer &amp; Asisten Laboratorium</p>
+
+                <div class="identity-badges">
+                  <span class="badge-chip">🏛️ Univ. Pancasila</span>
+                  <span class="badge-chip">⭐ IPK 3.60 / 4.00</span>
+                  <span class="badge-chip">⏱️ 1.5 Tahun Asisten Lab</span>
+                </div>
+
+                <div class="identity-divider"></div>
+
+                <!-- Personal Bio Quote -->
+                <p class="identity-quote">
+                  "Menekuni logika komputasi terstruktur, arsitektur data modular, dan rancang bangun perangkat lunak yang andal untuk memecahkan problem nyata."
+                </p>
+
+                <!-- Quick Direct Actions in the Card -->
+                <div class="profile-card-actions">
+                  <a href="https://api.whatsapp.com/send/?phone=6282297078296&text=Halo%20Alifian%2C%20saya%20melihat%20portofolio%20Anda%20dan%20ingin%20berdiskusi" target="_blank" rel="noopener" class="btn-card-primary" title="Hubungi langsung via WhatsApp">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+                    <span>Hubungi Alifian</span>
+                  </a>
+                  <button type="button" class="btn-card-secondary btn-open-cv-card" id="btn-open-cv-card" title="Buka Dokumen CV Standar ATS">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <span>CV ATS</span>
+                  </button>
+                </div>
+
+                <!-- Social Connectivity Row -->
+                <div class="card-social-strip">
+                  <a href="https://github.com/alifianrevan" target="_blank" rel="noopener noreferrer" class="card-social-item" title="Kunjungi Profil GitHub">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="https://linkedin.com/in/alifian-revan" target="_blank" rel="noopener noreferrer" class="card-social-item" title="Koneksi LinkedIn">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a href="mailto:revanarnanta@gmail.com" class="card-social-item" title="Kirim Pesan Email">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span>Email</span>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          </aside>
 
-          <!-- Right: 4 Core Pillars of Mastery -->
-          <div class="prolog-pillars">
-            <div class="celestial-card">
-              <div class="card-num">I</div>
-              <div class="card-content">
-                <h3>Rekayasa Perangkat Lunak &amp; OOP</h3>
-                <p>Penguasaan 4 pilar OOP (Enkapsulasi, Pewarisan, Polimorfisme, Abstraksi), arsitektur modular MVC pada JavaFX, dan clean code standards.</p>
+          <!-- KOLOM KEDUA: DESKRIPSI LENGKAP PROFIL & PILAR -->
+          <div class="profile-details-column">
+            <!-- Biodata & Narasi Utama -->
+            <div class="profile-narrative-card">
+              <h3 class="narrative-heading">Tentang Diri &amp; Latar Belakang Komputasi</h3>
+              <p class="lead-text">
+                Saya adalah mahasiswa tingkat akhir <strong>Teknik Informatika di Universitas Pancasila</strong> dengan rekam jejak dedikasi <strong>1,5 tahun sebagai Asisten Laboratorium Praktikum</strong>, mendampingi dan mengarahkan mahasiswa dalam memahami logika komputasi mendalam serta standar rekayasa perangkat lunak modern.
+              </p>
+              <p>
+                Fokus keahlian saya berakar pada <strong>Software Engineering, Full-Stack Web Development, dan Sains Data</strong>, dengan keahlian teknis membangun aplikasi desktop modular menggunakan <strong>Java (JavaFX, OOP, Maven)</strong>, antarmuka web responsif dengan <strong>HTML5/CSS3 dan JavaScript</strong>, serta skrip analitis berbasis <strong>Python</strong>.
+              </p>
+              <p>
+                Dalam ranah manajemen data, saya mahir dalam <strong>Normalisasi Basis Data Relasional hingga 3NF</strong> menggunakan SQL, konstruksi query bertingkat, serta optimasi indeks. Keahlian ini disempurnakan dengan eksplorasi multidisiplin pada rancang bangun <strong>Internet of Things (IoT)</strong> dan analisis spasial citra satelit melalui <strong>ArcGIS &amp; QGIS</strong>.
+              </p>
+
+              <!-- Grid Spesifikasi Pribadi & Koordinat Akademik -->
+              <div class="celestial-meta-grid">
+                <div class="meta-item">
+                  <span class="meta-label">NAMA LENGKAP</span>
+                  <span class="meta-value">Alifian Revan Arnanta</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">INSTITUSI AKADEMIS</span>
+                  <span class="meta-value">Universitas Pancasila · Teknik Informatika S1</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">INDEKS PRESTASI KUMULATIF</span>
+                  <span class="meta-value">3.60 / 4.00</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">PENGALAMAN ASISTENSI</span>
+                  <span class="meta-value">1,5 Tahun (3 Periode Praktikum Lab)</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">KOORDINAT DOMISILI</span>
+                  <span class="meta-value">Sawangan, Kota Depok, Jawa Barat</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">STATUS KETERSEDIAAN</span>
+                  <span class="meta-value status-available">● Terbuka untuk Rekayasa Perangkat Lunak &amp; Magang</span>
+                </div>
               </div>
             </div>
 
-            <div class="celestial-card">
-              <div class="card-num">II</div>
-              <div class="card-content">
-                <h3>Basis Data Relasional &amp; 3NF</h3>
-                <p>Translasi kebutuhan nyata ke ERD, normalisasi sistematis UNF hingga 3NF, query multi-table JOIN kompleks, dan tuning performa indeks.</p>
-              </div>
-            </div>
+            <!-- 4 Pilar Keunggulan Rekayasa -->
+            <div class="profile-pillars-wrap">
+              <h4 class="pillars-subheading">4 Pilar Fondasi Rekayasa:</h4>
+              <div class="profile-pillars-grid">
+                <div class="celestial-card">
+                  <div class="card-num">I</div>
+                  <div class="card-content">
+                    <h3>Rekayasa Perangkat Lunak &amp; OOP</h3>
+                    <p>Penguasaan 4 pilar OOP (Enkapsulasi, Pewarisan, Polimorfisme, Abstraksi), arsitektur modular MVC pada JavaFX, dan clean code standards.</p>
+                  </div>
+                </div>
 
-            <div class="celestial-card">
-              <div class="card-num">III</div>
-              <div class="card-content">
-                <h3>Algoritma &amp; Struktur Data</h3>
-                <p>Implementasi tipe data abstrak linear (Linked List, Stack, Queue) dan non-linear (BST, Graph) dengan efisiensi pencarian &amp; sorting.</p>
-              </div>
-            </div>
+                <div class="celestial-card">
+                  <div class="card-num">II</div>
+                  <div class="card-content">
+                    <h3>Basis Data Relasional &amp; 3NF</h3>
+                    <p>Translasi kebutuhan nyata ke ERD, normalisasi sistematis UNF hingga 3NF, query multi-table JOIN kompleks, dan tuning performa indeks.</p>
+                  </div>
+                </div>
 
-            <div class="celestial-card">
-              <div class="card-num">IV</div>
-              <div class="card-content">
-                <h3>Sistem Terapan IoT &amp; SIG</h3>
-                <p>Integrasi perangkat sensor telemetri, otomasi monitoring, serta analisis citra satelit dan data geospasial via QGIS dan ArcGIS.</p>
+                <div class="celestial-card">
+                  <div class="card-num">III</div>
+                  <div class="card-content">
+                    <h3>Algoritma &amp; Struktur Data</h3>
+                    <p>Implementasi tipe data abstrak linear (Linked List, Stack, Queue) dan non-linear (BST, Graph) dengan efisiensi pencarian &amp; sorting.</p>
+                  </div>
+                </div>
+
+                <div class="celestial-card">
+                  <div class="card-num">IV</div>
+                  <div class="card-content">
+                    <h3>Sistem Terapan IoT &amp; SIG</h3>
+                    <p>Integrasi perangkat sensor telemetri, otomasi monitoring, serta analisis citra satelit dan data geospasial via QGIS dan ArcGIS.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1078,6 +1178,21 @@
             </div>
           </section>
         </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile Photo Lightbox Modal -->
+  <div class="photo-lightbox-modal" id="photo-lightbox" aria-hidden="true" role="dialog" aria-label="Pratinjau Foto Profil">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Tutup Pratinjau Foto">✕</button>
+      <div class="lightbox-card">
+        <img src="assets/img/profile-alifian.jpg" alt="Foto Resmi Alifian Revan Arnanta" class="lightbox-img">
+        <div class="lightbox-caption">
+          <h4>Alifian Revan Arnanta</h4>
+          <p>Software Engineer · Asisten Laboratorium · Teknik Informatika Universitas Pancasila</p>
+        </div>
       </div>
     </div>
   </div>

@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   // 5. ATS CV PREVIEW MODAL
   // ==========================================================================
-  const btnOpenCv = document.getElementById('btn-open-cv');
+  const btnOpenCvButtons = document.querySelectorAll('#btn-open-cv, #btn-open-cv-card, .btn-open-cv-card, .btn-cv-pill');
   const cvModal = document.getElementById('cv-modal');
   const btnCloseModal = document.getElementById('btn-close-modal');
   const btnPrintCv = document.getElementById('btn-print-cv');
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (btnOpenCv) btnOpenCv.addEventListener('click', showModal);
+  btnOpenCvButtons.forEach(btn => btn.addEventListener('click', showModal));
   if (btnCloseModal) btnCloseModal.addEventListener('click', hideModal);
 
   if (cvModal) {
@@ -313,9 +313,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Profile Photo Lightbox Preview
+  const photoLightbox = document.getElementById('photo-lightbox');
+  const photoTrigger = document.querySelector('.profile-photo-frame');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxBackdrop = document.getElementById('lightbox-backdrop');
+
+  function openPhotoLightbox() {
+    if (photoLightbox) {
+      photoLightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closePhotoLightbox() {
+    if (photoLightbox) {
+      photoLightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (photoTrigger) photoTrigger.addEventListener('click', openPhotoLightbox);
+  if (lightboxClose) lightboxClose.addEventListener('click', closePhotoLightbox);
+  if (lightboxBackdrop) lightboxBackdrop.addEventListener('click', closePhotoLightbox);
+
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && cvModal && cvModal.classList.contains('active')) {
-      hideModal();
+    if (e.key === 'Escape') {
+      if (cvModal && cvModal.classList.contains('active')) {
+        hideModal();
+      }
+      if (photoLightbox && photoLightbox.classList.contains('active')) {
+        closePhotoLightbox();
+      }
     }
   });
 
