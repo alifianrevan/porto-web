@@ -70,7 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
           0,
           Math.PI * 2
         );
-        ctx.fillStyle = `rgba(226, 232, 240, ${this.alpha})`;
+        const isSolar = document.body.classList.contains('solar-theme');
+        ctx.fillStyle = isSolar 
+          ? `rgba(71, 85, 105, ${this.alpha * 0.42})`
+          : `rgba(226, 232, 240, ${this.alpha})`;
         ctx.fill();
       }
     }
@@ -105,8 +108,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const tailY = this.y - Math.sin(this.angle) * this.length;
 
         const grad = ctx.createLinearGradient(this.x, this.y, tailX, tailY);
-        grad.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
-        grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+        const isSolar = document.body.classList.contains('solar-theme');
+        if (isSolar) {
+          grad.addColorStop(0, `rgba(245, 158, 11, ${this.opacity * 0.75})`);
+          grad.addColorStop(1, 'rgba(245, 158, 11, 0)');
+        } else {
+          grad.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
+          grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+        }
 
         ctx.beginPath();
         ctx.moveTo(this.x, this.y);
@@ -152,7 +161,10 @@ document.addEventListener('DOMContentLoaded', () => {
           ctx.moveTo(starRenderX, starRenderY);
           ctx.lineTo(mouse.x, mouse.y);
           const lineAlpha = (1 - dist / 110) * 0.35;
-          ctx.strokeStyle = `rgba(226, 232, 240, ${lineAlpha})`;
+          const isSolar = document.body.classList.contains('solar-theme');
+          ctx.strokeStyle = isSolar
+            ? `rgba(71, 85, 105, ${lineAlpha * 0.6})`
+            : `rgba(226, 232, 240, ${lineAlpha})`;
           ctx.lineWidth = 0.75;
           ctx.stroke();
         }
@@ -371,6 +383,31 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 900);
 
       contactForm.reset();
+    });
+  }
+
+  // ==========================================================================
+  // 8. THEME TOGGLE: CELESTIAL NIGHT (BULAN) & SOLAR DAY (MATAHARI)
+  // ==========================================================================
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  
+  // Initialize theme from storage
+  const savedTheme = localStorage.getItem('portfolio-theme');
+  if (savedTheme === 'solar') {
+    document.body.classList.add('solar-theme');
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isSolar = document.body.classList.toggle('solar-theme');
+      localStorage.setItem('portfolio-theme', isSolar ? 'solar' : 'celestial');
+
+      if (isSolar) {
+        triggerToast('☀️ Mode Siang (Matahari) diaktifkan');
+      } else {
+        triggerToast('🌙 Mode Malam (Bulan) diaktifkan');
+      }
     });
   }
 });

@@ -36,15 +36,33 @@
   <!-- Minimalist Fixed Navigation -->
   <header class="site-header" id="site-header">
     <div class="nav-container">
-      <a href="#hero" class="brand-link" aria-label="Beranda">
-        <svg class="brand-crest" width="30" height="30" viewBox="0 0 100 100" fill="none" stroke="currentColor">
-          <circle cx="50" cy="50" r="44" stroke-width="2.5" stroke-dasharray="4 3"/>
-          <path d="M50 18 C32 18 18 32 18 50 C18 68 32 82 50 82 C42 74 38 63 38 50 C38 37 42 26 50 18 Z" fill="currentColor" fill-opacity="0.15" stroke-width="2.5"/>
-          <circle cx="68" cy="36" r="3.5" fill="currentColor"/>
-          <circle cx="75" cy="56" r="2" fill="currentColor"/>
-        </svg>
-        <span class="brand-initials">AR</span>
-      </a>
+      <div class="brand-group">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Alihkan Mode Terang / Gelap" title="Klik untuk beralih antara Mode Malam (Bulan) dan Mode Siang (Matahari)">
+          <!-- Moon Icon (Active in Dark Mode) -->
+          <svg class="crest-icon icon-moon" width="30" height="30" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+            <circle cx="50" cy="50" r="44" stroke-width="2.5" stroke-dasharray="4 3"/>
+            <path d="M50 18 C32 18 18 32 18 50 C18 68 32 82 50 82 C42 74 38 63 38 50 C38 37 42 26 50 18 Z" fill="currentColor" fill-opacity="0.25" stroke-width="2.5"/>
+            <circle cx="68" cy="36" r="3.5" fill="currentColor"/>
+            <circle cx="75" cy="56" r="2.2" fill="currentColor"/>
+          </svg>
+          <!-- Sun Icon (Active in Light Mode) -->
+          <svg class="crest-icon icon-sun" width="30" height="30" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+            <circle cx="50" cy="50" r="44" stroke-width="2.5" stroke-dasharray="4 3"/>
+            <circle cx="50" cy="50" r="18" fill="currentColor" fill-opacity="0.25" stroke-width="2.5"/>
+            <line x1="50" y1="12" x2="50" y2="22" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="50" y1="78" x2="50" y2="88" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="12" y1="50" x2="22" y2="50" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="78" y1="50" x2="88" y2="50" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="23" y1="23" x2="30" y2="30" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="70" y1="70" x2="77" y2="77" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="77" y1="23" x2="70" y2="30" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="30" y1="70" x2="23" y2="77" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <a href="#hero" class="brand-link" aria-label="Beranda">
+          <span class="brand-initials">AR</span>
+        </a>
+      </div>
 
       <nav class="desktop-nav" id="desktop-nav">
         <ul class="nav-links">
@@ -101,8 +119,10 @@
     <section class="celestial-hero" id="hero">
       <div class="hero-inner">
         <!-- Celestial Moon Crest Emblem -->
+        <!-- Celestial Moon Crest Emblem (Dark Mode) & Sun Crest Emblem (Light Mode) -->
         <div class="celestial-emblem-wrap">
-          <svg class="celestial-emblem" viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Moon Emblem (Dark Mode) -->
+          <svg class="celestial-emblem emblem-moon" viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Crescent and Orbit -->
             <path d="M120 18 C65 18 20 63 20 118 C20 156 42 189 74 205 C58 186 48 160 48 132 C48 83 88 44 136 44 C158 44 179 52 195 66 C176 37 150 18 120 18 Z" fill="rgba(226, 232, 240, 0.9)" />
             
@@ -124,6 +144,41 @@
             <path d="M72 110 C66 102 68 92 68 92 C68 92 76 96 76 106 Z" fill="rgba(226, 232, 240, 0.8)"/>
             <path d="M174 102 C184 98 186 88 186 88 C186 88 176 88 172 98 Z" fill="rgba(226, 232, 240, 0.8)"/>
             <path d="M166 114 C174 106 172 96 172 96 C172 96 164 100 164 110 Z" fill="rgba(226, 232, 240, 0.8)"/>
+          </svg>
+
+          <!-- Sun Emblem (Light Mode) -->
+          <svg class="celestial-emblem emblem-sun" viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Central Sun Core -->
+            <circle cx="120" cy="115" r="44" fill="rgba(15, 23, 42, 0.9)"/>
+            <!-- Solar Halo Ring -->
+            <circle cx="120" cy="115" r="56" stroke="rgba(15, 23, 42, 0.35)" stroke-width="2" stroke-dasharray="6 4"/>
+            <!-- Radiant Rays -->
+            <line x1="120" y1="46" x2="120" y2="30" stroke="rgba(15, 23, 42, 0.85)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="120" y1="184" x2="120" y2="200" stroke="rgba(15, 23, 42, 0.85)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="51" y1="115" x2="35" y2="115" stroke="rgba(15, 23, 42, 0.85)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="189" y1="115" x2="205" y2="115" stroke="rgba(15, 23, 42, 0.85)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="71" y1="66" x2="60" y2="55" stroke="rgba(15, 23, 42, 0.85)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="169" y1="164" x2="180" y2="175" stroke="rgba(15, 23, 42, 0.85)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="169" y1="66" x2="180" y2="55" stroke="rgba(15, 23, 42, 0.85)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="71" y1="164" x2="60" y2="175" stroke="rgba(15, 23, 42, 0.85)" stroke-width="2.5" stroke-linecap="round"/>
+
+            <!-- Observatory Dome atop solar disc -->
+            <path d="M106 72 A14 14 0 0 1 134 72 Z" fill="#ffffff" stroke="rgba(15, 23, 42, 0.9)" stroke-width="2"/>
+            <rect x="117" y="62" width="6" height="10" fill="rgba(15, 23, 42, 0.9)"/>
+
+            <!-- Rocket ascending -->
+            <path d="M172 74 C172 74 178 60 186 54 C194 62 180 68 180 68 L184 78 L176 82 L172 74 Z" fill="rgba(15, 23, 42, 0.9)"/>
+            <circle cx="180" cy="65" r="1.5" fill="#ffffff"/>
+
+            <!-- Satellite Antenna -->
+            <line x1="68" y1="80" x2="56" y2="66" stroke="rgba(15, 23, 42, 0.9)" stroke-width="2"/>
+            <path d="M50 60 C54 64 58 68 62 72" stroke="rgba(15, 23, 42, 0.9)" stroke-width="2" stroke-linecap="round"/>
+
+            <!-- Delicate sprouting foliage -->
+            <path d="M56 126 C46 122 44 112 44 112 C44 112 54 112 58 122 Z" fill="rgba(15, 23, 42, 0.8)"/>
+            <path d="M64 116 C58 108 60 98 60 98 C60 98 68 102 68 112 Z" fill="rgba(15, 23, 42, 0.8)"/>
+            <path d="M184 108 C194 104 196 94 196 94 C196 94 186 94 182 104 Z" fill="rgba(15, 23, 42, 0.8)"/>
+            <path d="M176 120 C184 112 182 102 182 102 C182 102 174 106 174 116 Z" fill="rgba(15, 23, 42, 0.8)"/>
           </svg>
         </div>
 
@@ -166,38 +221,38 @@
       <div class="planet-horizon-wrap">
         <svg class="planet-horizon-svg" viewBox="0 0 1440 320" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
           <!-- Planet Curvature Body -->
-          <path d="M0,320 L0,180 C360,90 1080,90 1440,180 L1440,320 Z" fill="#07090f"/>
+          <path class="horizon-ground" d="M0,320 L0,180 C360,90 1080,90 1440,180 L1440,320 Z"/>
           <!-- Horizon atmospheric rim line -->
-          <path d="M0,180 C360,90 1080,90 1440,180" stroke="rgba(226, 232, 240, 0.28)" stroke-width="1.5"/>
+          <path class="horizon-contour" d="M0,180 C360,90 1080,90 1440,180" stroke-width="1.5"/>
 
           <!-- Explorer Figure Silhouette standing on top crest -->
           <!-- Position at center x = 720, y ≈ 112 -->
           <g class="explorer-silhouette" transform="translate(712, 70)">
             <!-- Flag pole held in hand -->
-            <line x1="2" y1="46" x2="2" y2="4" stroke="#07090f" stroke-width="2"/>
-            <path d="M2,4 L16,9 L2,15 Z" fill="#07090f"/>
+            <line class="horizon-silhouette-stroke" x1="2" y1="46" x2="2" y2="4" stroke-width="2"/>
+            <path class="horizon-silhouette" d="M2,4 L16,9 L2,15 Z"/>
             <!-- Astronaut / Explorer Body -->
-            <circle cx="16" cy="18" r="7" fill="#07090f"/> <!-- Helmet -->
+            <circle class="horizon-silhouette" cx="16" cy="18" r="7"/> <!-- Helmet -->
             <circle cx="18" cy="18" r="3.5" fill="rgba(226, 232, 240, 0.4)"/> <!-- Visor reflection -->
-            <path d="M11,25 C11,25 14,24 18,24 C22,24 25,25 25,25 L23,38 L13,38 Z" fill="#07090f"/> <!-- Torso -->
-            <rect x="7" y="27" width="5" height="10" rx="2" fill="#07090f"/> <!-- Backpack -->
-            <line x1="14" y1="38" x2="12" y2="48" stroke="#07090f" stroke-width="3" stroke-linecap="round"/> <!-- Leg 1 -->
-            <line x1="21" y1="38" x2="22" y2="48" stroke="#07090f" stroke-width="3" stroke-linecap="round"/> <!-- Leg 2 -->
+            <path class="horizon-silhouette" d="M11,25 C11,25 14,24 18,24 C22,24 25,25 25,25 L23,38 L13,38 Z"/> <!-- Torso -->
+            <rect class="horizon-silhouette" x="7" y="27" width="5" height="10" rx="2"/> <!-- Backpack -->
+            <line class="horizon-silhouette-stroke" x1="14" y1="38" x2="12" y2="48" stroke-width="3" stroke-linecap="round"/> <!-- Leg 1 -->
+            <line class="horizon-silhouette-stroke" x1="21" y1="38" x2="22" y2="48" stroke-width="3" stroke-linecap="round"/> <!-- Leg 2 -->
           </g>
 
           <!-- Delicate foliage / plants sprouting across the crest (Moonfarmer hallmark) -->
           <!-- Left side sprouts -->
-          <path d="M520,138 C515,130 514,120 514,120 C514,120 522,122 525,132 Z" fill="#07090f"/>
-          <path d="M528,135 C524,126 527,117 527,117 C527,117 534,120 533,130 Z" fill="#07090f"/>
-          <path d="M580,126 C574,116 575,105 575,105 C575,105 584,108 584,120 Z" fill="#07090f"/>
-          <path d="M590,124 C595,114 605,112 605,112 C605,112 602,122 595,124 Z" fill="#07090f"/>
-          <path d="M640,118 C636,108 638,98 638,98 C638,98 646,102 645,114 Z" fill="#07090f"/>
+          <path class="horizon-silhouette" d="M520,138 C515,130 514,120 514,120 C514,120 522,122 525,132 Z"/>
+          <path class="horizon-silhouette" d="M528,135 C524,126 527,117 527,117 C527,117 534,120 533,130 Z"/>
+          <path class="horizon-silhouette" d="M580,126 C574,116 575,105 575,105 C575,105 584,108 584,120 Z"/>
+          <path class="horizon-silhouette" d="M590,124 C595,114 605,112 605,112 C605,112 602,122 595,124 Z"/>
+          <path class="horizon-silhouette" d="M640,118 C636,108 638,98 638,98 C638,98 646,102 645,114 Z"/>
 
           <!-- Right side sprouts -->
-          <path d="M780,118 C784,108 782,98 782,98 C782,98 774,102 775,114 Z" fill="#07090f"/>
-          <path d="M840,124 C835,114 825,112 825,112 C825,112 828,122 835,124 Z" fill="#07090f"/>
-          <path d="M850,126 C856,116 855,105 855,105 C855,105 846,108 846,120 Z" fill="#07090f"/>
-          <path d="M910,135 C914,126 911,117 911,117 C911,117 904,120 905,130 Z" fill="#07090f"/>
+          <path class="horizon-silhouette" d="M780,118 C784,108 782,98 782,98 C782,98 774,102 775,114 Z"/>
+          <path class="horizon-silhouette" d="M840,124 C835,114 825,112 825,112 C825,112 828,122 835,124 Z"/>
+          <path class="horizon-silhouette" d="M850,126 C856,116 855,105 855,105 C855,105 846,108 846,120 Z"/>
+          <path class="horizon-silhouette" d="M910,135 C914,126 911,117 911,117 C911,117 904,120 905,130 Z"/>
         </svg>
       </div>
     </section>
