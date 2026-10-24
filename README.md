@@ -35,10 +35,11 @@ npx serve .
 # Atau menggunakan Python
 python -m http.server 3000
 ```
-Buka browser di `http://localhost:3000`.
+Buka browser di `http://localhost:5500`.
 
 ---
 
 ## 📬 Kontak
 - **Email**: [revanarnanta@gmail.com](mailto:revanarnanta@gmail.com)
 - **GitHub**: [github.com/alifianrevan](https://github.com/alifianrevan)
+- **LinkedIn**: [linkedin.com/in/alifian-revan-arnanta-010b1b29b](https://www.linkedin.com/in/alifian-revan-arnanta-010b1b29b)
