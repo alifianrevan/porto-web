@@ -7,7 +7,6 @@ Website portofolio profesional dan interaktif milik **Alifian Revan Arnanta**, M
 ---
 
 ## 🌟 Fitur Utama
-- **Desain Modern & Elegan**: Mengusung tema *Dark Futuristic Glassmorphism* dengan pencahayaan neon ambient (Indigo, Cyan, Emerald).
 - **Konten CV ATS Terverifikasi**: Diterjemahkan secara komprehensif ke dalam Bahasa Indonesia profesional berdasarkan kurikulum dan pengalaman nyata.
 - **Interaktivitas Penuh**:
   - *Dynamic Typewriter*: Animasi penulisan dinamis keahlian & peran.
